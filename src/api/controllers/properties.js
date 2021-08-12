@@ -1,19 +1,34 @@
+const propertyService = require('../../services/propertyService');
+
 const getProperties = async (req, res) => {
-	res.json('get all');
+	const result = await propertyService.get();
+	res.json(result);
 };
 
 const getPropertyById = async (req, res) => {
 	const { id } = req.params;
-	res.json('gett by id');
+	const result = await propertyService.getById(id);
+	res.json(result);
 };
 
 const addProperty = async (req, res) => {
-	res.json('add');
+	const { address, size, rooms, utilities, tenantName } = req.body;
+	const property = {
+		address,
+		size,
+		rooms,
+		utilities,
+		tenantName,
+	};
+
+	const result = await propertyService.add(property);
+	res.json(result);
 };
 
 const deleteProperty = async (req, res) => {
 	const { id } = req.params;
-	res.json('delete');
+	const result = await propertyService.delete(id);
+	res.json(result);
 };
 
 module.exports = {
