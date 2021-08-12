@@ -7,7 +7,7 @@ const slowDown = require('express-slow-down');
 
 const errorHandler = require('../middlewares/errorHandler');
 const notFound = require('../middlewares/notFound');
-const tenants = require('./routes/tenants');
+const properties = require('./routes/properties');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -30,7 +30,7 @@ app.use(helmet());
 app.use(express.json());
 
 // Routes
-app.use('/api/tenants', tenants);
+app.use('/api/properties', properties);
 
 // Not found
 app.use(notFound);
