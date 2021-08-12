@@ -1,4 +1,4 @@
-const mapProperties = require('../utils/mapper');
+const { mapProperties } = require('../utils/mapper');
 const {
 	get,
 	getById,

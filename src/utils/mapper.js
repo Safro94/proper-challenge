@@ -7,4 +7,4 @@ const mapProperties = properties =>
 		tenantName,
 	}));
 
-module.exports = mapProperties;
+module.exports = { mapProperties };
