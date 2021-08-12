@@ -8,6 +8,7 @@ const slowDown = require('express-slow-down');
 const errorHandler = require('../middlewares/errorHandler');
 const notFound = require('../middlewares/notFound');
 const properties = require('./routes/properties');
+const sequelize = require('../db');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -38,5 +39,6 @@ app.use(notFound);
 // Error handler
 app.use(errorHandler);
 
-// eslint-disable-next-line no-console
-app.listen(port, () => console.log(`Server running on port ${port}`));
+sequelize.sync({ force: true }).then(() => {
+	app.listen(port, () => console.log(`Server running on port ${port}`));
+});
