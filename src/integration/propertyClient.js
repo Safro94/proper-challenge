@@ -25,7 +25,7 @@ const add = async ({ address, size, rooms, utilities, tenantName }) => {
 const deleteById = async id => {
 	await Property.destroy({
 		where: {
-			id: id,
+			id,
 		},
 	});
 };

@@ -22,7 +22,7 @@ jest.mock('../../../services/propertyService', () => {
 	};
 });
 
-describe('Property Service', () => {
+describe('Property Controller', () => {
 	const res = mockRes();
 	const req = mockReq({
 		params: { id: 1 },
