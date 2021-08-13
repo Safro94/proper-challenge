@@ -1,20 +1,38 @@
-import { useTranslation } from 'react-i18next';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Home from '../../pages/home';
+import PropertyDetail from '../../pages/propertyDetail';
+
+import { AppContainer } from './index.styles';
+
+// import { useTranslation } from 'react-i18next';
 
 const App = () => {
-	const { t, i18n } = useTranslation('app');
+	// const { t, i18n } = useTranslation('app');
 
-	const changeLanguage = (language: string) => {
-		i18n.changeLanguage(language);
-	};
+	// const changeLanguage = (language: string) => {
+	// 	i18n.changeLanguage(language);
+	// };
 
 	return (
-		<div>
-			{t('title')}
-			<div>
+		<Router>
+			{/* <div>
 				<button onClick={() => changeLanguage('en')}>EN</button>
 				<button onClick={() => changeLanguage('es')}>ES</button>
-			</div>
-		</div>
+			</div> */}
+
+			{/* <Header /> */}
+			<AppContainer>
+				<Switch>
+					<Route exact path='/'>
+						<Home />
+					</Route>
+					<Route path='/property/:propertyId'>
+						<PropertyDetail />
+					</Route>
+				</Switch>
+			</AppContainer>
+		</Router>
 	);
 };
 
