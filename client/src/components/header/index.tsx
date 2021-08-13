@@ -1,3 +1,4 @@
+import { FaBars } from 'react-icons/fa';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 
 import {
@@ -6,12 +7,21 @@ import {
 	HeaderContainer,
 	HeaderWrapper,
 	LogoContainer,
+	MenuButtonContainer,
 } from './index.styles';
 
-const Header = () => {
+interface IHeaderProps {
+	isOpen: boolean;
+	handleSidebar: (isOpen: boolean) => void;
+}
+
+const Header = ({ handleSidebar, isOpen }: IHeaderProps) => {
 	return (
 		<HeaderContainer>
 			<HeaderWrapper>
+				<MenuButtonContainer onClick={() => handleSidebar(!isOpen)}>
+					<FaBars />
+				</MenuButtonContainer>
 				<LogoContainer>
 					<Logo />
 				</LogoContainer>

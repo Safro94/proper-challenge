@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div(
+	({ theme }) => `
 	width: 100%;
 	height: 50px;
-	background-color: ${({ theme }) => theme.palette.primary.main};
+	background-color: ${theme.palette.primary.main};
 	position: sticky;
 	top: 0;
 	z-index: 999;
-`;
+`
+);
 
 export const HeaderWrapper = styled.div`
 	height: 100%;
@@ -17,8 +19,19 @@ export const HeaderWrapper = styled.div`
 	justify-content: space-between;
 `;
 
+export const MenuButtonContainer = styled.div(
+	({ theme }) => `
+	font-size: 1.5rem;
+	color: ${theme.palette.primary.text};
+
+	@media ${theme.breakpoints.tablet} {
+    display: none;
+  }
+`
+);
+
 export const LogoContainer = styled.div`
-	width: 100%;
+	width: 125px;
 	display: flex;
 	align-items: center;
 `;

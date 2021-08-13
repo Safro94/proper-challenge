@@ -1,3 +1,10 @@
+* {
+	font-family: 'Source Sans Pro', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 html,
 body,
 #root {
@@ -20,6 +27,12 @@ code {
 
 a {
 	text-decoration: none;
+}
+
+a:visited,
+a:hover,
+a:focus {
+	color: inherit;
 }
 
 ul {

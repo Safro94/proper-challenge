@@ -1,15 +1,20 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Header from '../header';
+import Sidebar from '../sidebar';
 
 import Home from '../../pages/home';
 import PropertyDetail from '../../pages/propertyDetail';
 
 import { AppContainer } from './index.styles';
+import { HOME, PROPERTY_DETAIL } from '../../constants/routes';
+import { useState } from 'react';
 
 // import { useTranslation } from 'react-i18next';
 
 const App = () => {
+	const [showSidebar, setShowSidebar] = useState(false);
+
 	// const { t, i18n } = useTranslation('app');
 
 	// const changeLanguage = (language: string) => {
@@ -23,13 +28,14 @@ const App = () => {
 				<button onClick={() => changeLanguage('es')}>ES</button>
 			</div> */}
 
-			<Header />
+			<Header isOpen={showSidebar} handleSidebar={setShowSidebar} />
 			<AppContainer>
+				<Sidebar isOpen={showSidebar} handleSidebar={setShowSidebar} />
 				<Switch>
-					<Route exact path='/'>
+					<Route exact path={HOME}>
 						<Home />
 					</Route>
-					<Route path='/property/:propertyId'>
+					<Route path={PROPERTY_DETAIL}>
 						<PropertyDetail />
 					</Route>
 				</Switch>
