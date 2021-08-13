@@ -8,6 +8,7 @@ import Error from '../error';
 
 import Home from '../../pages/home';
 import PropertyDetail from '../../pages/propertyDetail';
+import NotFound from '../../pages/notFound';
 
 import { HOME, PROPERTY_DETAIL } from '../../constants/routes';
 
@@ -41,9 +42,12 @@ const App = () => {
 							<Route exact path={HOME}>
 								<Home />
 							</Route>
+
 							<Route path={PROPERTY_DETAIL}>
 								<PropertyDetail />
 							</Route>
+
+							<Route component={NotFound} />
 						</Switch>
 					</ErrorBoundary>
 				</MainContainer>

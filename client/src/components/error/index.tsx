@@ -4,9 +4,9 @@ import error from '../../assets/error.png';
 
 import {
 	ErrorContainer,
-	GoBackTextContainer,
-	Image,
-	Text,
+	ErrorGoBackTextContainer,
+	ErrorImage,
+	ErrorText,
 } from './index.styles';
 
 interface IErrorProps {
@@ -18,13 +18,13 @@ const Error = ({ resetErrorBoundary }: IErrorProps) => {
 
 	return (
 		<ErrorContainer role='alert'>
-			<Image src={error} alt='Error' />
-			<Text>
+			<ErrorImage src={error} alt='Error' />
+			<ErrorText>
 				{t('text')}
-				<GoBackTextContainer onClick={resetErrorBoundary}>
+				<ErrorGoBackTextContainer onClick={resetErrorBoundary}>
 					{t('goBack')}
-				</GoBackTextContainer>
-			</Text>
+				</ErrorGoBackTextContainer>
+			</ErrorText>
 		</ErrorContainer>
 	);
 };

@@ -1,4 +1,5 @@
 import { FaBars } from 'react-icons/fa';
+
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 
 import {
