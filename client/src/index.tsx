@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import App from './components/app';
 
+import './translations/i18n';
 import './index.css';
 
 ReactDOM.render(
