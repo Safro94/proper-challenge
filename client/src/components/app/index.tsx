@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import Header from '../header';
+
 import Home from '../../pages/home';
 import PropertyDetail from '../../pages/propertyDetail';
 
@@ -21,7 +23,7 @@ const App = () => {
 				<button onClick={() => changeLanguage('es')}>ES</button>
 			</div> */}
 
-			{/* <Header /> */}
+			<Header />
 			<AppContainer>
 				<Switch>
 					<Route exact path='/'>
