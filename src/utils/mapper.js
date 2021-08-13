@@ -1,5 +1,6 @@
 const mapProperties = properties =>
-	properties.map(({ address, size, rooms, utilities, tenantName }) => ({
+	properties.map(({ id, address, size, rooms, utilities, tenantName }) => ({
+		id,
 		address,
 		size,
 		rooms,

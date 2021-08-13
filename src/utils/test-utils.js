@@ -12,6 +12,7 @@ const mockRes = params => {
 };
 
 const mockedProperty = {
+	id: 1,
 	address: 'abc',
 	size: '36mt2',
 	rooms: 3,
@@ -25,6 +26,7 @@ const mockedProperties = [{ ...mockedProperty }];
 
 const mappedProperties = [
 	{
+		id: 1,
 		address: 'abc',
 		size: '36mt2',
 		rooms: 3,

@@ -9,9 +9,44 @@ import { PROPERTIES_ENDPOINT } from '../../constants/endpoints';
 import fetcher from '../../utils/fetcher';
 
 import { IProperty } from '../../types';
+import AutoComplete from '../../components/autocomplete';
 
 const PropertiesContainer = () => {
-	const { t } = useTranslation('');
+	const items = [
+		{
+			id: 1,
+			address: 'korte leidsedwarsstraat 70',
+			size: '36mt2',
+			rooms: 3,
+			utilities: 'abc',
+			tenantName: 'Matias',
+		},
+		{
+			id: 2,
+			address: 'korte leidsedwarsstraat 30',
+			size: '36mt2',
+			rooms: 3,
+			utilities: 'abc',
+			tenantName: 'Martin',
+		},
+		{
+			id: 2,
+			address: 'korte leidsedwarsstraat 30',
+			size: '36mt2',
+			rooms: 3,
+			utilities: 'abc',
+			tenantName: 'Martin',
+		},
+		{
+			id: 2,
+			address: 'korte leidsedwarsstraat 30',
+			size: '36mt2',
+			rooms: 3,
+			utilities: 'abc',
+			tenantName: 'Martin',
+		},
+	];
+	const { t } = useTranslation('propertiesContainer');
 	const handleError = useErrorHandler();
 
 	const [properties, setProperties] = useState<IProperty[]>([]);
@@ -20,11 +55,20 @@ const PropertiesContainer = () => {
 		fetcher({
 			url: PROPERTIES_ENDPOINT,
 		}).then((res: IProperty[]) => {
-			!res ? setProperties([]) : setProperties(res);
+			setProperties(res ?? []);
 		}, handleError);
 	}, [handleError]);
 
-	return <Card>Text</Card>;
+	return (
+		<Card>
+			<AutoComplete
+				items={items}
+				onChange={() => {}}
+				labelText={t('autocompleteText')}
+			/>
+			{properties.map(item => 'hola')}
+		</Card>
+	);
 };
 
 export default PropertiesContainer;
