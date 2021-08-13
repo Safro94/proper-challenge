@@ -1,14 +1,17 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { ErrorBoundary } from 'react-error-boundary';
 
 import Header from '../header';
 import Sidebar from '../sidebar';
+import Error from '../error';
 
 import Home from '../../pages/home';
 import PropertyDetail from '../../pages/propertyDetail';
 
-import { AppContainer } from './index.styles';
 import { HOME, PROPERTY_DETAIL } from '../../constants/routes';
-import { useState } from 'react';
+
+import { AppContainer, MainContainer } from './index.styles';
 
 // import { useTranslation } from 'react-i18next';
 
@@ -31,14 +34,19 @@ const App = () => {
 			<Header isOpen={showSidebar} handleSidebar={setShowSidebar} />
 			<AppContainer>
 				<Sidebar isOpen={showSidebar} handleSidebar={setShowSidebar} />
-				<Switch>
-					<Route exact path={HOME}>
-						<Home />
-					</Route>
-					<Route path={PROPERTY_DETAIL}>
-						<PropertyDetail />
-					</Route>
-				</Switch>
+
+				<MainContainer>
+					<ErrorBoundary FallbackComponent={Error}>
+						<Switch>
+							<Route exact path={HOME}>
+								<Home />
+							</Route>
+							<Route path={PROPERTY_DETAIL}>
+								<PropertyDetail />
+							</Route>
+						</Switch>
+					</ErrorBoundary>
+				</MainContainer>
 			</AppContainer>
 		</Router>
 	);

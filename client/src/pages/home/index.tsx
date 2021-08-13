@@ -1,5 +1,7 @@
+import PropertiesContainer from '../../containers/properties';
+
 const Home = () => {
-	return <div>Home page</div>;
+	return <PropertiesContainer />;
 };
 
 export default Home;
