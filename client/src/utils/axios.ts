@@ -3,7 +3,6 @@ import https from 'https';
 
 const opts: AxiosRequestConfig = {
 	httpsAgent: new https.Agent({ rejectUnauthorized: false }),
-	baseURL: process.env.REACT_APP_SERVER_URL,
 };
 
 const interceptorError = (error: AxiosError) => Promise.reject(error.response);

@@ -11,3 +11,10 @@ export enum ButtonTypes {
 	Primary = 'primary',
 	Danger = 'danger',
 }
+
+export enum RequestStatus {
+	Idle = 'idle',
+	Pending = 'pending',
+	Resolved = 'resolved',
+	Rejected = 'rejected',
+}
