@@ -1,9 +1,4 @@
 {
-  "tenant": "Inquilino",
-  "rooms": "Habitaciones",
-  "size": "Tamaño",
-  "address": "Direccion",
-  "utilities": "Servicios",
   "deleteProperty": "Eliminar propiedad",
   "viewMore": "Ver mas"
 }

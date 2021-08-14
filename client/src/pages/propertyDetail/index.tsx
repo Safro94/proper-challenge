@@ -1,5 +1,7 @@
+import DetailContainer from '../../containers/detail';
+
 const PropertyDetail = () => {
-	return <div>Property Detail</div>;
+	return <DetailContainer />;
 };
 
 export default PropertyDetail;
