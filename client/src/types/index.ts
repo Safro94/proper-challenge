@@ -13,8 +13,13 @@ export enum ButtonTypes {
 }
 
 export enum RequestStatus {
-	Idle = 'idle',
 	Pending = 'pending',
 	Resolved = 'resolved',
 	Rejected = 'rejected',
+}
+
+export enum RequestMethods {
+	GET = 'get',
+	POST = 'post',
+	DELETE = 'delete',
 }
