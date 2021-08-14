@@ -30,7 +30,7 @@ const PropertiesContainer = () => {
 			tenantName: 'Martin',
 		},
 		{
-			id: 2,
+			id: 3,
 			address: 'korte leidsedwarsstraat 30',
 			size: '36mt2',
 			rooms: 3,
@@ -38,7 +38,7 @@ const PropertiesContainer = () => {
 			tenantName: 'Martin',
 		},
 		{
-			id: 2,
+			id: 4,
 			address: 'korte leidsedwarsstraat 30',
 			size: '36mt2',
 			rooms: 3,
@@ -63,10 +63,11 @@ const PropertiesContainer = () => {
 		<Card>
 			<AutoComplete
 				items={items}
+				// items={properties}
 				onChange={() => {}}
 				labelText={t('autocompleteText')}
+				filterProp='tenantName'
 			/>
-			{properties.map(item => 'hola')}
 		</Card>
 	);
 };

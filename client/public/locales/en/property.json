@@ -3,5 +3,7 @@
   "rooms": "Rooms",
   "size": "Size",
   "address": "Address",
-  "utilities": "Utilities"
+  "utilities": "Utilities",
+  "deleteProperty": "Delete property",
+  "viewMore": "View more"
 }

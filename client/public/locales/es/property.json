@@ -3,5 +3,7 @@
   "rooms": "Habitaciones",
   "size": "Tamaño",
   "address": "Direccion",
-  "utilities": "Servicios"
+  "utilities": "Servicios",
+  "deleteProperty": "Eliminar propiedad",
+  "viewMore": "Ver mas"
 }

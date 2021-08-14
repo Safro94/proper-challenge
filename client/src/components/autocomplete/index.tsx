@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { useCombobox } from 'downshift';
 
-import { IProperty } from '../../types';
-
 import Property from '../property';
 
 import {
@@ -11,15 +9,22 @@ import {
 	AutoCompleteInputContainer,
 	AutoCompleteLabel,
 	AutoCompleteList,
+	AutoCompleteWrapper,
 } from './index.styles';
 
 interface IAutoCompleteProps {
-	items: IProperty[];
+	items: any[];
 	onChange: (item: any) => void;
 	labelText: string;
+	filterProp: string;
 }
 
-const AutoComplete = ({ items, onChange, labelText }: IAutoCompleteProps) => {
+const AutoComplete = ({
+	items,
+	onChange,
+	labelText,
+	filterProp,
+}: IAutoCompleteProps) => {
 	const [inputItems, setInputItems] = useState<any[]>(items);
 	const {
 		isOpen,
@@ -31,11 +36,11 @@ const AutoComplete = ({ items, onChange, labelText }: IAutoCompleteProps) => {
 	} = useCombobox({
 		items: inputItems,
 
-		itemToString: item => (item ? item.tenantName : ''),
+		itemToString: item => (item ? item[filterProp] : ''),
 
 		onInputValueChange: ({ inputValue }) => {
 			const inputItem = items.filter(item => {
-				return item.tenantName
+				return item[filterProp]
 					.toLowerCase()
 					.startsWith(inputValue?.toLowerCase() ?? '');
 			});
@@ -57,11 +62,13 @@ const AutoComplete = ({ items, onChange, labelText }: IAutoCompleteProps) => {
 
 	return (
 		<AutoCompleteContainer>
-			<AutoCompleteLabel {...getLabelProps()}>{labelText}</AutoCompleteLabel>
+			<AutoCompleteWrapper>
+				<AutoCompleteLabel {...getLabelProps()}>{labelText}</AutoCompleteLabel>
 
-			<AutoCompleteInputContainer {...getComboboxProps()}>
-				<AutoCompleteInput {...getInputProps()} isActive={isOpen} />
-			</AutoCompleteInputContainer>
+				<AutoCompleteInputContainer {...getComboboxProps()}>
+					<AutoCompleteInput {...getInputProps()} isActive={isOpen} />
+				</AutoCompleteInputContainer>
+			</AutoCompleteWrapper>
 
 			<AutoCompleteList {...getMenuProps()}>
 				{inputItems.map((item, index) => (

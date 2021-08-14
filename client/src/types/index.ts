@@ -6,3 +6,8 @@ export interface IProperty {
 	utilities: string;
 	tenantName: string;
 }
+
+export enum ButtonTypes {
+	Primary = 'primary',
+	Danger = 'danger',
+}

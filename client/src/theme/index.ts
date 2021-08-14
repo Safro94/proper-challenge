@@ -22,6 +22,7 @@ export const theme: DefaultTheme = {
 			black: '#222831',
 			gray: '#eee',
 			white: '#ffffff',
+			danger: '#df4759',
 		},
 
 		primary: {
