@@ -1,0 +1,338 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PropertiesContainer should render correctly when fetcher returns properties 1`] = `
+<div
+  class="sc-bdnxRM jOdtAk"
+>
+  <div
+    class="sc-fujyAs ilgEth"
+  >
+    <a
+      class="sc-iCoGMd hkVfKz"
+      href="/property/add"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M363 277h-86v86h-42v-86h-86v-42h86v-86h42v86h86v42z"
+        />
+        <path
+          d="M256 90c44.3 0 86 17.3 117.4 48.6C404.7 170 422 211.7 422 256s-17.3 86-48.6 117.4C342 404.7 300.3 422 256 422c-44.3 0-86-17.3-117.4-48.6C107.3 342 90 300.3 90 256c0-44.3 17.3-86 48.6-117.4C170 107.3 211.7 90 256 90m0-42C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48z"
+        />
+      </svg>
+      addProperty
+    </a>
+  </div>
+  <div
+    class="sc-gtsrHT bCBPuE"
+  >
+    <div
+      class="sc-hKFxyN heRPeh"
+    >
+      <label
+        class="sc-jSFjdj kdvGLc"
+        for="downshift-0-input"
+        id="downshift-0-label"
+      >
+        autocompleteText
+      </label>
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-0-menu"
+        class="sc-dlnjwi iecQLF"
+        role="combobox"
+      >
+        <input
+          aria-autocomplete="list"
+          aria-controls="downshift-0-menu"
+          aria-labelledby="downshift-0-label"
+          autocomplete="off"
+          class="sc-eCApnc bSXRmS"
+          id="downshift-0-input"
+          placeholder="autocompleteText"
+          value=""
+        />
+      </div>
+    </div>
+    <ul
+      aria-labelledby="downshift-0-label"
+      class="sc-bkbkJK fSawmC"
+      id="downshift-0-menu"
+      role="listbox"
+    >
+      <li
+        aria-selected="false"
+        class="sc-dIsUp kHqbmm"
+        id="downshift-0-item-0"
+        role="option"
+      >
+        <div
+          class="sc-bqGGPW gFXebX"
+        >
+          <div
+            class="sc-hBMUJo PZmcA"
+          >
+            <img
+              alt="Property 0"
+              class="sc-fnVZcZ dgIXpp"
+              src="house.jpeg"
+            />
+          </div>
+          <div
+            class="sc-jrsJWt hqQffW"
+          >
+            <div
+              class="sc-kEqXSa ccymRA"
+            >
+              <h4
+                class="sc-iqAclL"
+              >
+                tenant
+              </h4>
+              <h5
+                class="sc-crzoAE emQjSB"
+              >
+                Matias
+              </h5>
+            </div>
+            <div
+              class="sc-kEqXSa ccymRA"
+            >
+              <h4
+                class="sc-iqAclL"
+              >
+                rooms
+              </h4>
+              <h5
+                class="sc-crzoAE emQjSB"
+              >
+                3
+              </h5>
+            </div>
+            <div
+              class="sc-kEqXSa ccymRA"
+            >
+              <h4
+                class="sc-iqAclL"
+              >
+                size
+              </h4>
+              <h5
+                class="sc-crzoAE emQjSB"
+              >
+                40mt2
+              </h5>
+            </div>
+            <div
+              class="sc-kEqXSa ccymRA"
+            >
+              <h4
+                class="sc-iqAclL"
+              >
+                address
+              </h4>
+              <h5
+                class="sc-crzoAE emQjSB"
+              >
+                abc
+              </h5>
+            </div>
+            <div
+              class="sc-kEqXSa ccymRA"
+            >
+              <h4
+                class="sc-iqAclL"
+              >
+                utilities
+              </h4>
+              <h5
+                class="sc-crzoAE emQjSB"
+              >
+                def
+              </h5>
+            </div>
+          </div>
+          <div
+            class="sc-ksluID fsnncj"
+          >
+            <a
+              class="sc-fFSPTT liBlhH"
+              href="/property/1"
+            >
+              viewMore
+            </a>
+            <button
+              class="sc-pNWdM bqZpHG"
+              type="button"
+            >
+              deleteProperty
+            </button>
+          </div>
+        </div>
+      </li>
+      <li
+        aria-selected="false"
+        class="sc-dIsUp kHqbmm"
+        id="downshift-0-item-1"
+        role="option"
+      >
+        <div
+          class="sc-bqGGPW gFXebX"
+        >
+          <div
+            class="sc-hBMUJo PZmcA"
+          >
+            <img
+              alt="Property 1"
+              class="sc-fnVZcZ dgIXpp"
+              src="house.jpeg"
+            />
+          </div>
+          <div
+            class="sc-jrsJWt hqQffW"
+          >
+            <div
+              class="sc-kEqXSa ccymRA"
+            >
+              <h4
+                class="sc-iqAclL"
+              >
+                tenant
+              </h4>
+              <h5
+                class="sc-crzoAE emQjSB"
+              >
+                Charles
+              </h5>
+            </div>
+            <div
+              class="sc-kEqXSa ccymRA"
+            >
+              <h4
+                class="sc-iqAclL"
+              >
+                rooms
+              </h4>
+              <h5
+                class="sc-crzoAE emQjSB"
+              >
+                3
+              </h5>
+            </div>
+            <div
+              class="sc-kEqXSa ccymRA"
+            >
+              <h4
+                class="sc-iqAclL"
+              >
+                size
+              </h4>
+              <h5
+                class="sc-crzoAE emQjSB"
+              >
+                40mt2
+              </h5>
+            </div>
+            <div
+              class="sc-kEqXSa ccymRA"
+            >
+              <h4
+                class="sc-iqAclL"
+              >
+                address
+              </h4>
+              <h5
+                class="sc-crzoAE emQjSB"
+              >
+                abc
+              </h5>
+            </div>
+            <div
+              class="sc-kEqXSa ccymRA"
+            >
+              <h4
+                class="sc-iqAclL"
+              >
+                utilities
+              </h4>
+              <h5
+                class="sc-crzoAE emQjSB"
+              >
+                def
+              </h5>
+            </div>
+          </div>
+          <div
+            class="sc-ksluID fsnncj"
+          >
+            <a
+              class="sc-fFSPTT liBlhH"
+              href="/property/2"
+            >
+              viewMore
+            </a>
+            <button
+              class="sc-pNWdM bqZpHG"
+              type="button"
+            >
+              deleteProperty
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`PropertiesContainer should render the loading when the request is not resolved yet 1`] = `
+<div>
+  Loading
+</div>
+`;
+
+exports[`PropertiesContainer should render the text when there are no properties 1`] = `
+<div
+  class="sc-bdnxRM jOdtAk"
+>
+  <div
+    class="sc-fujyAs ilgEth"
+  >
+    <a
+      class="sc-iCoGMd hkVfKz"
+      href="/property/add"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M363 277h-86v86h-42v-86h-86v-42h86v-86h42v86h86v42z"
+        />
+        <path
+          d="M256 90c44.3 0 86 17.3 117.4 48.6C404.7 170 422 211.7 422 256s-17.3 86-48.6 117.4C342 404.7 300.3 422 256 422c-44.3 0-86-17.3-117.4-48.6C107.3 342 90 300.3 90 256c0-44.3 17.3-86 48.6-117.4C170 107.3 211.7 90 256 90m0-42C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48z"
+        />
+      </svg>
+      addProperty
+    </a>
+  </div>
+  <h1
+    class="sc-gKAaRy iseYsU"
+  >
+    noProperties
+  </h1>
+</div>
+`;

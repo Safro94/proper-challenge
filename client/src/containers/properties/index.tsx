@@ -26,7 +26,7 @@ const PropertiesContainer = () => {
 	const handleError = useErrorHandler();
 
 	const [properties, setProperties] = useState<IProperty[]>([]);
-	const [isLoading, setIsLoading] = useState<boolean>(true);
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
 		fetcher({
