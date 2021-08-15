@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailContainer should render correctly when fetcher returns a property 1`] = `
+<div
+  class="sc-bdnxRM jOdtAk"
+>
+  <div
+    class="sc-jSFjdj fVgdVX"
+  >
+    <div
+      class="sc-iCoGMd xojqd"
+    >
+      <h2
+        class="sc-fujyAs idpLzs"
+      >
+        information
+      </h2>
+      <div
+        class="sc-gtsrHT dBklPe"
+      >
+        <div
+          class="sc-dlnjwi enLziH"
+        >
+          <h4
+            class="sc-hKFxyN"
+          >
+            tenant
+          </h4>
+          <h5
+            class="sc-eCApnc daHCGb"
+          >
+            Matias
+          </h5>
+        </div>
+        <div
+          class="sc-dlnjwi enLziH"
+        >
+          <h4
+            class="sc-hKFxyN"
+          >
+            rooms
+          </h4>
+          <h5
+            class="sc-eCApnc daHCGb"
+          >
+            3
+          </h5>
+        </div>
+        <div
+          class="sc-dlnjwi enLziH"
+        >
+          <h4
+            class="sc-hKFxyN"
+          >
+            size
+          </h4>
+          <h5
+            class="sc-eCApnc daHCGb"
+          >
+            40mt2
+          </h5>
+        </div>
+        <div
+          class="sc-dlnjwi enLziH"
+        >
+          <h4
+            class="sc-hKFxyN"
+          >
+            address
+          </h4>
+          <h5
+            class="sc-eCApnc daHCGb"
+          >
+            abc
+          </h5>
+        </div>
+        <div
+          class="sc-dlnjwi enLziH"
+        >
+          <h4
+            class="sc-hKFxyN"
+          >
+            utilities
+          </h4>
+          <h5
+            class="sc-eCApnc daHCGb"
+          >
+            def
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DetailContainer should render the loading when the request is not resolved yet 1`] = `
+<div>
+  Loading
+</div>
+`;
+
+exports[`DetailContainer should render the text when there is no property 1`] = `
+<h1
+  class="sc-pNWdM effdkz"
+>
+  noProperty
+</h1>
+`;

@@ -21,25 +21,17 @@ import {
 } from './index.styles';
 import Loading from '../../components/loading';
 
-interface IDetailContainerProps {
-	property?: IProperty;
-}
-
 interface IParams {
 	propertyId: string;
 }
 
-const DetailContainer = ({
-	property: receivedProperty,
-}: IDetailContainerProps) => {
+const DetailContainer = () => {
 	const { t } = useTranslation('detailContainer');
 	const { propertyId } = useParams<IParams>();
 	const handleError = useErrorHandler();
 
 	const [isLoading, setIsLoading] = useState<boolean>(true);
-	const [property, setProperty] = useState<IProperty | undefined>(
-		receivedProperty
-	);
+	const [property, setProperty] = useState<IProperty | undefined>();
 
 	useEffect(() => {
 		if (!property) {
