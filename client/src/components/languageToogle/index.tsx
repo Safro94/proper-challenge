@@ -18,6 +18,7 @@ const LanguageToogle = () => {
 		<LanguageToogleButtonsContainer>
 			{Object.values(SupportedLanguages).map(language => (
 				<LanguageToogleButton
+					key={language}
 					isActive={i18n.language === language}
 					onClick={() => changeLanguage(language)}
 				>

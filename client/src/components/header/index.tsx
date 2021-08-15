@@ -30,8 +30,11 @@ const Header = ({ handleSidebar, isOpen }: IHeaderProps) => {
 		<HeaderContainer>
 			<HeaderWrapper>
 				<HeaderMenuContainer>
-					<HeaderMenuButtonContainer onClick={() => handleSidebar(!isOpen)}>
-						<FaBars />
+					<HeaderMenuButtonContainer
+						data-testid='menu'
+						onClick={() => handleSidebar(!isOpen)}
+					>
+						<FaBars data-testid='icon' />
 					</HeaderMenuButtonContainer>
 
 					<HeaderLogoContainer>
