@@ -1,11 +1,9 @@
-import userEvent from '@testing-library/user-event';
 import { render, screen } from '../../../utils/test-utils';
 
 import LanguageToogle from '..';
 
 import { SupportedLanguages } from '../../../types';
 
-import { useTranslation } from 'react-i18next';
 jest.mock('react-i18next');
 
 describe('LanguageToogle', () => {
@@ -19,24 +17,4 @@ describe('LanguageToogle', () => {
 			screen.getByRole('button', { name: SupportedLanguages.EN.toUpperCase() })
 		).toBeInTheDocument();
 	});
-
-	// it('should call changeLanguage when the butto is clicked', () => {
-	// 	(useTranslation().i18n.changeLanguage as jest.Mock).mockImplementation(() =>
-	// 		Promise.resolve(1)
-	// 	);
-
-	// 	render(<LanguageToogle />);
-	// 	const button = screen.getByRole('button', {
-	// 		name: SupportedLanguages.EN.toUpperCase(),
-	// 	});
-
-	// 	userEvent.click(button);
-
-	// 	expect(
-	// 		(useTranslation().i18n.changeLanguage as jest.Mock).mock.calls
-	// 	).toHaveBeenCalledTimes(1);
-	// 	expect(useTranslation().i18n.changeLanguage).toHaveBeenCalledWith(
-	// 		SupportedLanguages.EN
-	// 	);
-	// });
 });
