@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div(
@@ -36,9 +37,12 @@ export const HeaderMenuButtonContainer = styled.div(
 );
 
 export const HeaderLogoContainer = styled.div`
-	width: 125px;
 	display: flex;
 	align-items: center;
+`;
+
+export const HeaderLogoContainerLink = styled(Link)`
+	width: 125px;
 `;
 
 export const HeaderAvatarContainer = styled.div(
