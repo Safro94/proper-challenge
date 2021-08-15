@@ -7,7 +7,9 @@ describe('Not Found', () => {
 		render(<NotFound />);
 
 		expect(screen.getByTestId('icon')).toBeInTheDocument();
-		expect(screen.getByText(/go back to the home page/i)).toBeInTheDocument();
-		expect(screen.getByRole('link').href).toBe('http://localhost/');
+		expect(screen.getByText(/goBack/i)).toBeInTheDocument();
+		expect((screen.getByRole('link') as HTMLLinkElement).href).toBe(
+			'http://localhost/'
+		);
 	});
 });

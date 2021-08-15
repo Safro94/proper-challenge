@@ -12,16 +12,12 @@ describe('Error', () => {
 
 	it('should show an image and a text', () => {
 		expect(screen.getByAltText(/error/i)).toBeInTheDocument();
-		expect(
-			screen.getByText(
-				/ooops, there's been an error, please try again in a few minutes/i
-			)
-		).toBeInTheDocument();
-		expect(screen.getByText(/go back to the home page/i)).toBeInTheDocument();
+		expect(screen.getByText(/text/i)).toBeInTheDocument();
+		expect(screen.getByText(/goBack/i)).toBeInTheDocument();
 	});
 
 	it('should call resetErrorBoundary when the reset text is clicked', () => {
-		userEvent.click(screen.getByText(/go back to the home page/i));
+		userEvent.click(screen.getByText(/goBack/i));
 		expect(resetErrorBoundary).toHaveBeenCalledTimes(1);
 	});
 });

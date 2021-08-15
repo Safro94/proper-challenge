@@ -20,7 +20,7 @@ export const ErrorText = styled.h2`
 	text-align: center;
 `;
 
-export const ErrorGoBackTextContainer = styled.h2`
+export const ErrorGoBackTextContainer = styled.span`
 	color: ${({ theme }) => theme.palette.primary.main};
 	cursor: pointer;
 `;
