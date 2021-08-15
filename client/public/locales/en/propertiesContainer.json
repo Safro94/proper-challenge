@@ -1,4 +1,5 @@
 {
   "autocompleteText": "Enter a tenant's name",
-  "noProperties": "Currently you don't have any properties"
+  "noProperties": "Currently you don't have any properties",
+  "addProperty": "New property"
 }

@@ -12,7 +12,14 @@ export const PropertyItem = styled.li(
 export const PropertyContainer = styled.div`
 	display: grid;
 	gap: 15px;
-	align-items: center;
+	min-height: 100%;
+	grid-template-rows: 1fr 1fr;
+`;
+
+export const PropertyButtonsContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 `;
 
 export const PropertyImageContainer = styled.div`

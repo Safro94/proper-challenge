@@ -4,7 +4,7 @@ import { useErrorHandler } from 'react-error-boundary';
 import Button from '../button';
 import PropertyInformation from '../propertyInformation';
 
-import { PROPERTY_DETAIL } from '../../constants/routes';
+import { HOME, PROPERTY_DETAIL } from '../../constants/routes';
 import { PROPERTIES_ENDPOINT } from '../../constants/endpoints';
 
 import { ButtonTypes, IProperty, RequestMethods } from '../../types';
@@ -14,12 +14,14 @@ import fetcher from '../../utils/fetcher';
 import house from '../../assets/house.jpeg';
 
 import {
+	PropertyButtonsContainer,
 	PropertyContainer,
 	PropertyImage,
 	PropertyImageContainer,
 	PropertyItem,
 	PropertyLink,
 } from './index.styles';
+import { useHistory } from 'react-router-dom';
 
 interface IPropertyProps {
 	item: IProperty;
@@ -28,18 +30,24 @@ interface IPropertyProps {
 }
 
 const Property = ({ item, index, getItemProps }: IPropertyProps) => {
+	const history = useHistory();
 	const { t } = useTranslation('property');
 	const handleError = useErrorHandler();
 
 	const handleDeleteProperty = (id: number) => {
-		fetcher({
-			url: `${process.env.REACT_APP_SERVER_URL}${PROPERTIES_ENDPOINT}/${id}`,
-			method: RequestMethods.DELETE,
-		}).catch(handleError);
+		console.log('entra');
+		// fetcher({
+		// 	url: `${process.env.REACT_APP_SERVER_URL}${PROPERTIES_ENDPOINT}/${id}`,
+		// 	method: RequestMethods.DELETE,
+		// }).then(() => {
+		// 	console.log('sape');
+
+		// 	history.push(HOME);
+		// }, handleError);
 	};
 
 	return (
-		<PropertyItem {...getItemProps({ item, index })}>
+		<PropertyItem {...getItemProps({ key: index, index, item })}>
 			<PropertyContainer>
 				<PropertyImageContainer>
 					<PropertyImage src={house} alt={`Property ${index}`} />
@@ -47,15 +55,20 @@ const Property = ({ item, index, getItemProps }: IPropertyProps) => {
 
 				<PropertyInformation property={item} />
 
-				<PropertyLink to={PROPERTY_DETAIL.replace(':propertyId', `${item.id}`)}>
-					{t('viewMore')}
-				</PropertyLink>
+				<PropertyButtonsContainer>
+					<PropertyLink
+						to={PROPERTY_DETAIL.replace(':propertyId', `${item.id}`)}
+					>
+						{t('viewMore')}
+					</PropertyLink>
 
-				<Button
-					variant={ButtonTypes.Danger}
-					text={t('deleteProperty')}
-					onClick={() => handleDeleteProperty(item.id)}
-				/>
+					<Button
+						variant={ButtonTypes.Danger}
+						onClick={() => handleDeleteProperty(item.id)}
+					>
+						{t('deleteProperty')}
+					</Button>
+				</PropertyButtonsContainer>
 			</PropertyContainer>
 		</PropertyItem>
 	);

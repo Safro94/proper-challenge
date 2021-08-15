@@ -23,3 +23,16 @@ export enum RequestMethods {
 	POST = 'post',
 	DELETE = 'delete',
 }
+
+export interface IDawaResponse {
+	type: string;
+	tekst: string;
+	caretpos: number;
+	forslagstekst: number;
+	data: any;
+}
+
+export interface IAddress {
+	type: string;
+	text: string;
+}

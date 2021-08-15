@@ -1,18 +1,25 @@
 import { useEffect, useState } from 'react';
 import { useErrorHandler } from 'react-error-boundary';
 import { useTranslation } from 'react-i18next';
+import { IoMdAddCircleOutline } from 'react-icons/io';
 
 import Card from '../../components/card';
 import AutoComplete from '../../components/autocomplete';
 import Loading from '../../components/loading';
 
 import { PROPERTIES_ENDPOINT } from '../../constants/endpoints';
+import { NEW_PROPERTY } from '../../constants/routes';
 
 import fetcher from '../../utils/fetcher';
 
 import { IProperty, RequestStatus } from '../../types';
 
-import { PropertyContainerText } from './index.styles';
+import {
+	PropertyContainerLink,
+	PropertyContainerLinkContainer,
+	PropertyContainerText,
+} from './index.styles';
+import PropertyMenu from '../../components/propertyMenu';
 
 const PropertiesContainer = () => {
 	const { t } = useTranslation('propertiesContainer');
@@ -34,14 +41,33 @@ const PropertiesContainer = () => {
 
 	return (
 		<Card>
+			<PropertyContainerLinkContainer>
+				<PropertyContainerLink to={NEW_PROPERTY}>
+					<IoMdAddCircleOutline />
+					{t('addProperty')}
+				</PropertyContainerLink>
+			</PropertyContainerLinkContainer>
+
 			{!properties.length ? (
 				<PropertyContainerText>{t('noProperties')}</PropertyContainerText>
 			) : (
 				<AutoComplete
+					placeholder={t('autocompleteText')}
 					items={properties}
-					// items={properties}
-					onChange={() => {}}
 					labelText={t('autocompleteText')}
+					render={(
+						getMenuProps: any,
+						inputItems: IProperty[],
+						getItemProps: any,
+						isOpen: boolean
+					) => (
+						<PropertyMenu
+							getMenuProps={getMenuProps}
+							inputItems={inputItems}
+							getItemProps={getItemProps}
+							isOpen={isOpen}
+						/>
+					)}
 					filterProp='tenantName'
 				/>
 			)}

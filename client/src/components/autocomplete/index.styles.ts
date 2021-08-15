@@ -5,29 +5,16 @@ export const AutoCompleteContainer = styled.div`
 	flex-direction: column;
 `;
 
-export const AutoCompleteInputContainer = styled.div(
-	({ theme }) => `
+export const AutoCompleteInputContainer = styled.div`
 	display: inline-block;
-	flex: 1;
+	width: 100%;
+`;
 
-	@media ${theme.breakpoints.mobile} {
-		flex: 2;
-	}
-`
-);
-
-export const AutoCompleteWrapper = styled.div(
-	({ theme }) => `
+export const AutoCompleteWrapper = styled.div`
 	display: flex;
-	align-items: center;
 	gap: 10px;
 	flex-direction: column;
-	
-	@media ${theme.breakpoints.mobile} {
-		flex-direction: row;
-	}
-`
-);
+`;
 
 export const AutoCompleteInput = styled.input`
 	width: 100%;
@@ -37,17 +24,13 @@ export const AutoCompleteInput = styled.input`
 	border-radius: 6px;
 `;
 
-export const AutoCompleteLabel = styled.label`
-	font-size: 1.3em;
+export const AutoCompleteLabel = styled.label(
+	({ theme }) => `
 	font-weight: bold;
 	text-align: center;
-	flex: 1;
-`;
 
-export const AutoCompleteList = styled.ul`
-	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-	gap: 15px;
-	margin: 15px 0;
-`;
+	@media ${theme.breakpoints.mobile} {
+		text-align: left;
+	}
+`
+);

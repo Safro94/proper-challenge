@@ -9,8 +9,9 @@ import Error from '../error';
 import Home from '../../pages/home';
 import PropertyDetail from '../../pages/propertyDetail';
 import NotFound from '../../pages/notFound';
+import NewProperty from '../../pages/newProperty';
 
-import { HOME, PROPERTY_DETAIL } from '../../constants/routes';
+import { HOME, NEW_PROPERTY, PROPERTY_DETAIL } from '../../constants/routes';
 
 import { AppContainer, MainContainer } from './index.styles';
 
@@ -43,7 +44,11 @@ const App = () => {
 								<Home />
 							</Route>
 
-							<Route path={PROPERTY_DETAIL}>
+							<Route exact path={NEW_PROPERTY}>
+								<NewProperty />
+							</Route>
+
+							<Route exact path={PROPERTY_DETAIL}>
 								<PropertyDetail />
 							</Route>
 

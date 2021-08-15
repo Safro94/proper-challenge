@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useErrorHandler } from 'react-error-boundary';
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { StreetView } from 'react-google-map-street-view';
 
 import Card from '../../components/card';
+import PropertyInformation from '../../components/propertyInformation';
 
 import { PROPERTIES_ENDPOINT } from '../../constants/endpoints';
 
@@ -16,8 +18,6 @@ import {
 	PropertyDetailInformationContainer,
 	PropertyDetailTitle,
 } from './index.styles';
-import PropertyInformation from '../../components/propertyInformation';
-import { useTranslation } from 'react-i18next';
 
 interface IDetailContainerProps {
 	property?: IProperty;

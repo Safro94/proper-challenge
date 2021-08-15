@@ -1,4 +1,5 @@
 {
   "autocompleteText": "Ingrese el nombre de un inquilino",
-  "noProperties": "Usted no posee ninguna propiedad actualmente"
+  "noProperties": "Usted no posee ninguna propiedad actualmente",
+  "addProperty": "Nueva propiedad"
 }

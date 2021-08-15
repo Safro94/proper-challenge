@@ -7,7 +7,6 @@ interface IFetcher {
 	url: string;
 	data?: null | any;
 	body?: null | any;
-	headers?: null | any;
 }
 
 interface IResponse {
@@ -19,17 +18,12 @@ const fetcher = async ({
 	method = RequestMethods.GET,
 	url,
 	body = null,
-	headers = null,
 }: IFetcher): Promise<IResponse> => {
 	let data;
 	let status = RequestStatus.Pending;
 
 	try {
-		const result = await axios[method](
-			url,
-			JSON.parse(headers),
-			JSON.parse(body)
-		);
+		const result = await axios[method](url, body);
 		data = result.data;
 		status = RequestStatus.Resolved;
 	} catch (error) {

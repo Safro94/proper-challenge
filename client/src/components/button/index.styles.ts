@@ -1,4 +1,5 @@
 import styled, { DefaultTheme } from 'styled-components';
+
 import { ButtonTypes } from '../../types';
 
 const variantStyles = (theme: DefaultTheme, variant = 'primary') =>
@@ -29,7 +30,6 @@ export const ButtonBase = styled.button<{ variant: ButtonTypes }>(
 	padding: 10px;
 	border-radius: 6px;
 	cursor: pointer;
-	z-index: 10;
 	transition: 0.3s ease-in-out;
 	font-weight: bold;
 

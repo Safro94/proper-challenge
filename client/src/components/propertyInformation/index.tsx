@@ -13,7 +13,7 @@ interface IPropertyInformationProps {
 }
 
 const PropertyInformation = ({ property }: IPropertyInformationProps) => {
-	const { t } = useTranslation('propertyInformation');
+	const { t } = useTranslation('common');
 
 	return (
 		<PropertyInformationContainer>

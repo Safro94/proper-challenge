@@ -5,7 +5,8 @@ export const PropertyInformationContainer = styled.div(
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
-	color: ${theme.palette.common.black}
+	color: ${theme.palette.common.black};
+	justify-content: space-between;
 `
 );
 

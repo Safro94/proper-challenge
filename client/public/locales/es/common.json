@@ -3,5 +3,6 @@
   "rooms": "Habitaciones",
   "size": "Tamaño",
   "address": "Direccion",
-  "utilities": "Servicios"
+  "utilities": "Servicios",
+  "add": "Agregar"
 }
