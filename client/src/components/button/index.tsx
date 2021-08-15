@@ -7,6 +7,7 @@ interface IButtonProps {
 	onClick: (e: any) => void;
 	variant?: ButtonTypes;
 	type?: 'button' | 'submit' | 'reset' | undefined;
+	disabled?: boolean;
 }
 
 const Button = ({
@@ -14,18 +15,15 @@ const Button = ({
 	children,
 	variant = ButtonTypes.Primary,
 	type = 'button',
+	disabled = false,
 	...rest
 }: IButtonProps) => {
-	const handleClick = () => {
-		console.log('entra aca');
-	};
-
 	return (
 		<ButtonBase
-			onClick={handleClick}
+			onClick={onClick}
 			variant={variant}
 			type={type}
-			disabled
+			disabled={disabled}
 			{...rest}
 		>
 			{children}

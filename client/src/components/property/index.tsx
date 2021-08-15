@@ -4,7 +4,7 @@ import { useErrorHandler } from 'react-error-boundary';
 import Button from '../button';
 import PropertyInformation from '../propertyInformation';
 
-import { HOME, PROPERTY_DETAIL } from '../../constants/routes';
+import { PROPERTY_DETAIL } from '../../constants/routes';
 import { PROPERTIES_ENDPOINT } from '../../constants/endpoints';
 
 import { ButtonTypes, IProperty, RequestMethods } from '../../types';
@@ -21,7 +21,6 @@ import {
 	PropertyItem,
 	PropertyLink,
 } from './index.styles';
-import { useHistory } from 'react-router-dom';
 
 interface IPropertyProps {
 	item: IProperty;
@@ -30,20 +29,16 @@ interface IPropertyProps {
 }
 
 const Property = ({ item, index, getItemProps }: IPropertyProps) => {
-	const history = useHistory();
 	const { t } = useTranslation('property');
 	const handleError = useErrorHandler();
 
 	const handleDeleteProperty = (id: number) => {
-		console.log('entra');
-		// fetcher({
-		// 	url: `${process.env.REACT_APP_SERVER_URL}${PROPERTIES_ENDPOINT}/${id}`,
-		// 	method: RequestMethods.DELETE,
-		// }).then(() => {
-		// 	console.log('sape');
-
-		// 	history.push(HOME);
-		// }, handleError);
+		fetcher({
+			url: `${process.env.REACT_APP_SERVER_URL}${PROPERTIES_ENDPOINT}/${id}`,
+			method: RequestMethods.DELETE,
+		}).then(() => {
+			window.location.reload();
+		}, handleError);
 	};
 
 	return (

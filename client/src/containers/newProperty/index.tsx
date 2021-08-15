@@ -33,10 +33,10 @@ const NewPropertyContainer = () => {
 	const [utilities, setUtilities] = useState('');
 
 	const isInvalid =
-		address.trim() === '' &&
-		size.trim() === '' &&
-		rooms < 1 &&
-		tenantName.trim() === '' &&
+		address.trim() === '' ||
+		size.trim() === '' ||
+		rooms < 1 ||
+		tenantName.trim() === '' ||
 		utilities.trim() === '';
 
 	const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {

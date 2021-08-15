@@ -38,5 +38,10 @@ export const ButtonBase = styled.button<{ variant: ButtonTypes }>(
 	&:hover {
 		background-color: ${theme.palette.common.white};
 	}
+
+	&:disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
 `
 );

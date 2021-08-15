@@ -7,7 +7,7 @@ export const DropdownMenuListContainer = styled.div`
 export const DropdownMenuList = styled.ul(
 	({ theme }) => `
 	position: absolute;
-	background-color: white;
+	background-color: ${theme.palette.common.white};
 	width: 100%;
 	max-height: 20rem;
 	overflow-y: auto;
@@ -19,20 +19,17 @@ export const DropdownMenuList = styled.ul(
 `
 );
 
-export const DropdownMenuListItem = styled.li<{ isActive: boolean }>(
-	({ theme, isActive }) => `
+export const DropdownMenuListItem = styled.li(
+	({ theme }) => `
 	padding: 0.5rem;
 	cursor: pointer;
 	border-bottom: 1px solid ${theme.palette.primary.main};
 	color: ${theme.palette.primary.main};
 	font-size: 1rem;
 
-	  ${
-			isActive &&
-			`
-			color: rgba(0,0,0,.95);
-			background: rgba(0,0,0,.03);
-		`
-		}
+	&:hover {
+		background-color: ${theme.palette.primary.main};
+		color: ${theme.palette.primary.text};
+	}
 `
 );
