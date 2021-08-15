@@ -58,14 +58,12 @@ const PropertiesContainer = () => {
 					render={(
 						getMenuProps: any,
 						inputItems: IProperty[],
-						getItemProps: any,
-						isOpen: boolean
+						getItemProps: any
 					) => (
 						<PropertyMenu
 							getMenuProps={getMenuProps}
 							inputItems={inputItems}
 							getItemProps={getItemProps}
-							isOpen={isOpen}
 						/>
 					)}
 					filterProp='tenantName'

@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PropertyInformation should render correctly 1`] = `
+<div
+  class="sc-bdnxRM bDiZob"
+>
+  <div
+    class="sc-gtsrHT JXsyT"
+  >
+    <h4
+      class="sc-dlnjwi"
+    >
+      tenant
+    </h4>
+    <h5
+      class="sc-hKFxyN cLDGBv"
+    >
+      Matias
+    </h5>
+  </div>
+  <div
+    class="sc-gtsrHT JXsyT"
+  >
+    <h4
+      class="sc-dlnjwi"
+    >
+      rooms
+    </h4>
+    <h5
+      class="sc-hKFxyN cLDGBv"
+    >
+      3
+    </h5>
+  </div>
+  <div
+    class="sc-gtsrHT JXsyT"
+  >
+    <h4
+      class="sc-dlnjwi"
+    >
+      size
+    </h4>
+    <h5
+      class="sc-hKFxyN cLDGBv"
+    >
+      40mt2
+    </h5>
+  </div>
+  <div
+    class="sc-gtsrHT JXsyT"
+  >
+    <h4
+      class="sc-dlnjwi"
+    >
+      address
+    </h4>
+    <h5
+      class="sc-hKFxyN cLDGBv"
+    >
+      abc
+    </h5>
+  </div>
+  <div
+    class="sc-gtsrHT JXsyT"
+  >
+    <h4
+      class="sc-dlnjwi"
+    >
+      utilities
+    </h4>
+    <h5
+      class="sc-hKFxyN cLDGBv"
+    >
+      def
+    </h5>
+  </div>
+</div>
+`;

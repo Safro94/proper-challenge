@@ -25,6 +25,8 @@ const DropdownMenu = ({
 					<DropdownMenuList {...getMenuProps({}, { suppressRefError: true })}>
 						{inputItems.map((item: IAddress, index: number) => (
 							<DropdownMenuListItem
+								data-testid='list-item'
+								key={item.text}
 								{...getItemProps({ key: index, index, item })}
 							>
 								{item.text}

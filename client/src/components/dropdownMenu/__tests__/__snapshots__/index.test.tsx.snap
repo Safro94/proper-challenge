@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownMenu DropdownMenu with items should render correctly 1`] = `
+<div
+  class="sc-bdnxRM bsETMm"
+>
+  <ul
+    class="sc-gtsrHT cLNfuw"
+  >
+    <li
+      class="sc-dlnjwi iNMXoj"
+      data-testid="list-item"
+    >
+      Matias
+    </li>
+    <li
+      class="sc-dlnjwi iNMXoj"
+      data-testid="list-item"
+    >
+      Charles
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`DropdownMenu DropdownMenu without items should not render list items if inputItems is empty 1`] = `null`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PropertyMenu should render correctly 1`] = `
+<ul
+  class="sc-bdnxRM hZjstM"
+>
+  <div>
+    Property
+  </div>
+  <div>
+    Property
+  </div>
+</ul>
+`;

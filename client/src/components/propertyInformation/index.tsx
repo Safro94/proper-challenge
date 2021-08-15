@@ -18,27 +18,27 @@ const PropertyInformation = ({ property }: IPropertyInformationProps) => {
 	return (
 		<PropertyInformationContainer>
 			<PropertyTenantContainer>
-				<PropertyTenantLabel>{t('tenant')}:</PropertyTenantLabel>
+				<PropertyTenantLabel>{t('tenant')}</PropertyTenantLabel>
 				<PropertyTenantText>{property.tenantName}</PropertyTenantText>
 			</PropertyTenantContainer>
 
 			<PropertyTenantContainer>
-				<PropertyTenantLabel>{t('rooms')}:</PropertyTenantLabel>
+				<PropertyTenantLabel>{t('rooms')}</PropertyTenantLabel>
 				<PropertyTenantText>{property.rooms}</PropertyTenantText>
 			</PropertyTenantContainer>
 
 			<PropertyTenantContainer>
-				<PropertyTenantLabel>{t('size')}:</PropertyTenantLabel>
+				<PropertyTenantLabel>{t('size')}</PropertyTenantLabel>
 				<PropertyTenantText>{property.size}</PropertyTenantText>
 			</PropertyTenantContainer>
 
 			<PropertyTenantContainer>
-				<PropertyTenantLabel>{t('address')}:</PropertyTenantLabel>
+				<PropertyTenantLabel>{t('address')}</PropertyTenantLabel>
 				<PropertyTenantText>{property.address}</PropertyTenantText>
 			</PropertyTenantContainer>
 
 			<PropertyTenantContainer>
-				<PropertyTenantLabel>{t('utilities')}:</PropertyTenantLabel>
+				<PropertyTenantLabel>{t('utilities')}</PropertyTenantLabel>
 				<PropertyTenantText>{property.utilities}</PropertyTenantText>
 			</PropertyTenantContainer>
 		</PropertyInformationContainer>

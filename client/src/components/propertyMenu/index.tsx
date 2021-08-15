@@ -7,7 +7,6 @@ interface IPropertyMenuProps {
 	getMenuProps: any;
 	inputItems: IProperty[];
 	getItemProps: any;
-	isOpen: boolean;
 }
 
 const PropertyMenu = ({

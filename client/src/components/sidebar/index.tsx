@@ -33,7 +33,10 @@ const Sidebar = ({ handleSidebar, isOpen }: ISidebarProps) => {
 	return (
 		<SidebarContainer isOpen={isOpen}>
 			<SidebarWrapper>
-				<CloseButtonContainer onClick={() => handleSidebar(!isOpen)}>
+				<CloseButtonContainer
+					data-testid='close-button'
+					onClick={() => handleSidebar(!isOpen)}
+				>
 					<FaWindowClose />
 				</CloseButtonContainer>
 

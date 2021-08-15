@@ -1,9 +1,9 @@
 {
-  "tenant": "Tenant",
-  "rooms": "Rooms",
-  "size": "Size",
-  "address": "Address",
-  "utilities": "Utilities",
+  "tenant": "Tenant:",
+  "rooms": "Rooms:",
+  "size": "Size:",
+  "address": "Address:",
+  "utilities": "Utilities:",
   "add": "Add",
   "welcome": "Welcome"
 }

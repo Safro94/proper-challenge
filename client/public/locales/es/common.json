@@ -1,9 +1,9 @@
 {
-  "tenant": "Inquilino",
-  "rooms": "Habitaciones",
-  "size": "Tamaño",
-  "address": "Direccion",
-  "utilities": "Servicios",
+  "tenant": "Inquilino:",
+  "rooms": "Habitaciones:",
+  "size": "Tamaño:",
+  "address": "Direccion:",
+  "utilities": "Servicios:",
   "add": "Agregar",
   "welcome": "Bienvenido/a"
 }
