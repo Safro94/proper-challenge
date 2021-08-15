@@ -15,7 +15,7 @@ interface ISubmitProps {
 	children: React.ReactNode;
 	onClick: (e: React.FormEvent<HTMLFormElement>) => void;
 	type?: 'button' | 'submit' | 'reset' | undefined;
-	disabled: boolean;
+	disabled?: boolean;
 }
 
 const Form: FC & {
@@ -42,10 +42,11 @@ const Submit = ({
 	children,
 	onClick,
 	type = 'submit',
+	disabled = false,
 	...rest
 }: ISubmitProps) => {
 	return (
-		<Button onClick={onClick} type={type} {...rest}>
+		<Button onClick={onClick} disabled={disabled} type={type} {...rest}>
 			{children}
 		</Button>
 	);
