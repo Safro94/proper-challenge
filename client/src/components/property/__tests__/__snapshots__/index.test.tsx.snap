@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Property should render correctly 1`] = `
+<li
+  class="sc-jSFjdj eDBPpq"
+>
+  <div
+    class="sc-gKAaRy klXkns"
+  >
+    <div
+      class="sc-fujyAs iWqvxR"
+    >
+      <img
+        alt="Property 1"
+        class="sc-pNWdM bhKqTs"
+        src="house.jpeg"
+      />
+    </div>
+    <div
+      class="sc-gtsrHT dBklPe"
+    >
+      <div
+        class="sc-dlnjwi enLziH"
+      >
+        <h4
+          class="sc-hKFxyN"
+        >
+          tenant
+        </h4>
+        <h5
+          class="sc-eCApnc daHCGb"
+        >
+          Matias
+        </h5>
+      </div>
+      <div
+        class="sc-dlnjwi enLziH"
+      >
+        <h4
+          class="sc-hKFxyN"
+        >
+          rooms
+        </h4>
+        <h5
+          class="sc-eCApnc daHCGb"
+        >
+          3
+        </h5>
+      </div>
+      <div
+        class="sc-dlnjwi enLziH"
+      >
+        <h4
+          class="sc-hKFxyN"
+        >
+          size
+        </h4>
+        <h5
+          class="sc-eCApnc daHCGb"
+        >
+          40mt2
+        </h5>
+      </div>
+      <div
+        class="sc-dlnjwi enLziH"
+      >
+        <h4
+          class="sc-hKFxyN"
+        >
+          address
+        </h4>
+        <h5
+          class="sc-eCApnc daHCGb"
+        >
+          abc
+        </h5>
+      </div>
+      <div
+        class="sc-dlnjwi enLziH"
+      >
+        <h4
+          class="sc-hKFxyN"
+        >
+          utilities
+        </h4>
+        <h5
+          class="sc-eCApnc daHCGb"
+        >
+          def
+        </h5>
+      </div>
+    </div>
+    <div
+      class="sc-iCoGMd iitrTY"
+    >
+      <a
+        class="sc-jrsJWt gwtpa"
+        href="/property/1"
+      >
+        viewMore
+      </a>
+      <button
+        class="sc-bdnxRM jjtgId"
+        type="button"
+      >
+        deleteProperty
+      </button>
+    </div>
+  </div>
+</li>
+`;
