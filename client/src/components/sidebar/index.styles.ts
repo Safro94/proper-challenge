@@ -52,6 +52,7 @@ export const SidebarListItem = styled.li<ISidebarListItemProps>(
 	({ theme, active }) => `
 	padding: 5px 10px;
   font-size: 1.3em;
+	font-weight: bold;
 	cursor: pointer;
 	display: flex;
 	align-items: center;

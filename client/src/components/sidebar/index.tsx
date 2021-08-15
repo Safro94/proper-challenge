@@ -20,6 +20,7 @@ import {
 	SidebarListItem,
 	SidebarWrapper,
 } from './index.styles';
+import { useTranslation } from 'react-i18next';
 
 interface ISidebarProps {
 	isOpen: boolean;
@@ -27,6 +28,8 @@ interface ISidebarProps {
 }
 
 const Sidebar = ({ handleSidebar, isOpen }: ISidebarProps) => {
+	const { t } = useTranslation('sidebar');
+
 	return (
 		<SidebarContainer isOpen={isOpen}>
 			<SidebarWrapper>
@@ -34,43 +37,41 @@ const Sidebar = ({ handleSidebar, isOpen }: ISidebarProps) => {
 					<FaWindowClose />
 				</CloseButtonContainer>
 
-				<Menu title='Dashboard'>
+				<Menu title={t('dashboard')}>
 					<Link to={HOME}>
 						<SidebarListItem active>
 							<FaHome />
-							Home
+							{t('home')}
 						</SidebarListItem>
 					</Link>
 
 					<SidebarListItem>
 						<FaMoneyBillAlt />
-						Payments
+						{t('payments')}
 					</SidebarListItem>
 
 					<SidebarListItem>
 						<IoAnalyticsOutline />
-						Sales
+						{t('sales')}
 					</SidebarListItem>
 				</Menu>
 
-				<Menu title='Notifications'>
-					<Link to={HOME}>
-						<SidebarListItem>
-							<FaMailBulk />
-							Mail
-						</SidebarListItem>
-					</Link>
+				<Menu title={t('notifications')}>
+					<SidebarListItem>
+						<FaMailBulk />
+						{t('mail')}
+					</SidebarListItem>
 
 					<SidebarListItem>
 						<BiMessageSquareDetail />
-						Messages
+						{t('messages')}
 					</SidebarListItem>
 				</Menu>
 
-				<Menu title='Account'>
+				<Menu title={t('account')}>
 					<SidebarListItem>
 						<BsFillGearFill />
-						Settings
+						{t('settings')}
 					</SidebarListItem>
 				</Menu>
 			</SidebarWrapper>
