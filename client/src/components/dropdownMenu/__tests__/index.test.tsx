@@ -55,29 +55,19 @@ describe('DropdownMenu', () => {
 			expect(screen.queryAllByTestId('list-item')).toHaveLength(0);
 			expect(container.firstChild).toMatchSnapshot();
 		});
-	});
 
-	it('should not render list items if inputItems is empty', () => {
-		render(
-			<DropdownMenu
-				isOpen
-				getMenuProps={() => {}}
-				inputItems={[]}
-				getItemProps={() => {}}
-			/>
-		);
-	});
+		it('should not render list items if isOpen is false', () => {
+			const { container } = render(
+				<DropdownMenu
+					isOpen={false}
+					getMenuProps={() => {}}
+					inputItems={items}
+					getItemProps={() => {}}
+				/>
+			);
 
-	it('should not render list items if isOpen is false', () => {
-		render(
-			<DropdownMenu
-				isOpen={false}
-				getMenuProps={() => {}}
-				inputItems={items}
-				getItemProps={() => {}}
-			/>
-		);
-
-		expect(screen.queryAllByTestId('list-item')).toHaveLength(0);
+			expect(screen.queryAllByTestId('list-item')).toHaveLength(0);
+			expect(container.firstChild).toMatchSnapshot();
+		});
 	});
 });
