@@ -11,13 +11,15 @@ import { PROPERTIES_ENDPOINT } from '../../constants/endpoints';
 
 import fetcher from '../../utils/fetcher';
 
-import { IProperty } from '../../types';
+import { IProperty, RequestStatus } from '../../types';
 
 import {
 	PropertyDetailContainer,
 	PropertyDetailInformationContainer,
+	PropertyDetailText,
 	PropertyDetailTitle,
 } from './index.styles';
+import Loading from '../../components/loading';
 
 interface IDetailContainerProps {
 	property?: IProperty;
@@ -34,6 +36,7 @@ const DetailContainer = ({
 	const { propertyId } = useParams<IParams>();
 	const handleError = useErrorHandler();
 
+	const [isLoading, setIsLoading] = useState<boolean>(true);
 	const [property, setProperty] = useState<IProperty | undefined>(
 		receivedProperty
 	);
@@ -43,14 +46,17 @@ const DetailContainer = ({
 			fetcher({
 				url: `${process.env.REACT_APP_SERVER_URL}${PROPERTIES_ENDPOINT}/${propertyId}`,
 			}).then(res => {
+				setIsLoading(res.status === RequestStatus.Pending);
 				setProperty(res.data);
 			}, handleError);
 		}
 	}, [handleError, property, propertyId]);
 
+	if (isLoading) return <Loading />;
+
 	return (
 		<>
-			{property && (
+			{property ? (
 				<Card>
 					<PropertyDetailContainer>
 						<PropertyDetailInformationContainer>
@@ -66,6 +72,8 @@ const DetailContainer = ({
 						/> */}
 					</PropertyDetailContainer>
 				</Card>
+			) : (
+				<PropertyDetailText>{t('noProperty')}</PropertyDetailText>
 			)}
 		</>
 	);

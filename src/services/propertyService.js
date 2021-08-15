@@ -14,7 +14,7 @@ class PropertyService {
 
 	async getById(id) {
 		const item = await getById(id);
-		if (!item) return {};
+		if (!item) return null;
 
 		return mapProperties([item]).pop();
 	}

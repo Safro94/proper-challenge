@@ -45,13 +45,13 @@ describe('Property Service', () => {
 		expect(mapProperties).toHaveBeenCalledWith(mockedProperties);
 	});
 
-	it('should return an empty object if getById does not find the item', async () => {
+	it('should return null if getById does not find the item', async () => {
 		const id = 1;
 		getById.mockImplementation(() => null);
 
 		const result = await propertyService.getById(id);
 
-		expect(result).toStrictEqual({});
+		expect(result).toBeNull();
 
 		expect(getById).toHaveBeenCalledTimes(1);
 		expect(getById).toHaveBeenCalledWith(id);
