@@ -1,7 +1,8 @@
 // theme.ts
 import { DefaultTheme } from 'styled-components';
+import { IBreakpoints } from '../types/styled';
 
-const breakpoints = {
+const breakpoints: IBreakpoints = {
 	mobile: '425px',
 	tablet: '780px',
 	laptop: '992px',
