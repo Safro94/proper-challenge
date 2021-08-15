@@ -15,24 +15,11 @@ import { HOME, NEW_PROPERTY, PROPERTY_DETAIL } from '../../constants/routes';
 
 import { AppContainer, MainContainer } from './index.styles';
 
-// import { useTranslation } from 'react-i18next';
-
 const App = () => {
 	const [showSidebar, setShowSidebar] = useState(false);
 
-	// const { t, i18n } = useTranslation('app');
-
-	// const changeLanguage = (language: string) => {
-	// 	i18n.changeLanguage(language);
-	// };
-
 	return (
 		<Router>
-			{/* <div>
-				<button onClick={() => changeLanguage('en')}>EN</button>
-				<button onClick={() => changeLanguage('es')}>ES</button>
-			</div> */}
-
 			<Header isOpen={showSidebar} handleSidebar={setShowSidebar} />
 			<AppContainer>
 				<Sidebar isOpen={showSidebar} handleSidebar={setShowSidebar} />

@@ -24,6 +24,11 @@ export enum RequestMethods {
 	DELETE = 'delete',
 }
 
+export enum SupportedLanguages {
+	EN = 'en',
+	ES = 'es',
+}
+
 export interface IDawaResponse {
 	type: string;
 	tekst: string;
