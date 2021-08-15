@@ -24,3 +24,5 @@ exports[`DropdownMenu DropdownMenu with items should render correctly 1`] = `
 `;
 
 exports[`DropdownMenu DropdownMenu without items should not render list items if inputItems is empty 1`] = `null`;
+
+exports[`DropdownMenu DropdownMenu without items should not render list items if isOpen is false 1`] = `null`;

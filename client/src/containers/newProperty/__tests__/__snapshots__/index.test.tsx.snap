@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewPropertyContainer should render correctly 1`] = `
+<div
+  class="sc-jSFjdj jFwjWg"
+>
+  <h2
+    class="sc-crzoAE jfCOzI"
+  >
+    newPropertyContainer:newPropertyTitle
+  </h2>
+  <form
+    class="sc-jrsJWt jKmbSQ"
+    method="POST"
+  >
+    <div
+      class="sc-dIsUp bxqZgp"
+    >
+      <div
+        class="sc-bdnxRM iWitlZ"
+      >
+        <div
+          class="sc-dlnjwi cSrDLl"
+        >
+          <label
+            class="sc-eCApnc fahIwV"
+            for="downshift-0-input"
+            id="downshift-0-label"
+          >
+            address
+          </label>
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-owns="downshift-0-menu"
+            class="sc-gtsrHT gIlwKp"
+            role="combobox"
+          >
+            <input
+              aria-autocomplete="list"
+              aria-controls="downshift-0-menu"
+              aria-labelledby="downshift-0-label"
+              autocomplete="off"
+              class="sc-hKFxyN daVEHi"
+              id="downshift-0-input"
+              placeholder="newPropertyContainer:enter address"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-dIsUp bxqZgp"
+    >
+      <label
+        class="sc-kEqXSa gsioAq"
+      >
+        tenant
+      </label>
+      <input
+        class="sc-iqAclL kVfQdq"
+        placeholder="newPropertyContainer:enter tenant"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="sc-dIsUp bxqZgp"
+    >
+      <label
+        class="sc-kEqXSa gsioAq"
+      >
+        rooms
+      </label>
+      <input
+        class="sc-iqAclL kVfQdq"
+        placeholder="newPropertyContainer:enter rooms"
+        type="number"
+        value="1"
+      />
+    </div>
+    <div
+      class="sc-dIsUp bxqZgp"
+    >
+      <label
+        class="sc-kEqXSa gsioAq"
+      >
+        size
+      </label>
+      <input
+        class="sc-iqAclL kVfQdq"
+        placeholder="newPropertyContainer:enter size"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="sc-dIsUp bxqZgp"
+    >
+      <label
+        class="sc-kEqXSa gsioAq"
+      >
+        utilities
+      </label>
+      <input
+        class="sc-iqAclL kVfQdq"
+        placeholder="newPropertyContainer:enter utilities"
+        type="text"
+        value=""
+      />
+    </div>
+    <button
+      class="sc-pNWdM jnMIbl"
+      disabled=""
+      type="submit"
+    >
+      add
+    </button>
+  </form>
+</div>
+`;

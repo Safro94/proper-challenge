@@ -93,7 +93,7 @@ const NewPropertyContainer = () => {
 						filterProp='text'
 						render={(
 							getMenuProps: any,
-							inputItems: any,
+							inputItems: IAddress[],
 							getItemProps: any,
 							isOpen: boolean
 						) => (
