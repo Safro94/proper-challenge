@@ -41,6 +41,7 @@ app.use(
 			directives: {
 				...helmet.contentSecurityPolicy.getDefaultDirectives(),
 				'script-src': ["'self'", "'unsafe-inline'", process.env.APP_URL],
+				'connect-src': ["'self'", process.env.DAWA_API],
 			},
 		},
 	})
