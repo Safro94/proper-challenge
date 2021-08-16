@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useState } from 'react';
 import { useErrorHandler } from 'react-error-boundary';
 import { useTranslation } from 'react-i18next';
@@ -30,6 +30,7 @@ const NewPropertyContainer = () => {
 	const history = useHistory();
 	const { t } = useTranslation(['common', 'newPropertyContainer']);
 	const handleError = useErrorHandler();
+	const addressInputRef = useRef<HTMLInputElement>();
 
 	const [isAddressEditable, setIsAddressEditable] = useState(true);
 	const [address, setAddress] = useState('');
@@ -64,6 +65,7 @@ const NewPropertyContainer = () => {
 	};
 
 	const onSelectedItem = ({ text }: { text: string }) => {
+		addressInputRef?.current?.blur();
 		setAddress(text);
 		setIsAddressEditable(false);
 	};
@@ -105,6 +107,7 @@ const NewPropertyContainer = () => {
 							onChange={onSelectedItem}
 							labelText={t('address')}
 							filterProp='text'
+							inputRef={addressInputRef}
 							render={(
 								getMenuProps: any,
 								inputItems: IAddress[],

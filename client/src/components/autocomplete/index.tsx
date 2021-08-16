@@ -17,6 +17,7 @@ interface IAutoCompleteProps {
 	filterProp: string;
 	render: any;
 	placeholder: string;
+	inputRef?: any;
 }
 
 const AutoComplete = ({
@@ -27,6 +28,7 @@ const AutoComplete = ({
 	onInputChange = () => {},
 	onChange = () => {},
 	placeholder,
+	inputRef,
 }: IAutoCompleteProps) => {
 	const [inputItems, setInputItems] = useState(items);
 	const {
@@ -73,6 +75,7 @@ const AutoComplete = ({
 						{...getInputProps({
 							onChange: onInputChange,
 							placeholder,
+							ref: inputRef,
 						})}
 						isActive={isOpen}
 					/>
