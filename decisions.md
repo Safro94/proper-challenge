@@ -6,7 +6,7 @@
 
 3. The database only has one table, with a field called TenantName, this should've been an id and I should've added another table for tenants but I didn't want to overcomplicate things.
 
-4. I created a utility function to fetch data. I was going to create a custom hook for that but I also had to use the function on event handler so I'd have ended up with two implementations if I'd have used the hook, as you can't call a hook on an event handler.
+4. I created a utility function to fetch data. I was going to create a custom hook for that but I also had to use the function on event handler so I'd have ended up with two implementations if I'd have used the hook, as you can't call a hook on an event handler. I also used a status with an enum instead of a boolean such as isLoading based on [this article](https://kentcdodds.com/blog/stop-using-isloading-booleans)
 
 5. I used Downshift for the autocomplete functionality because it has a lot of accessibility focus. Looking back, maybe it'd have been easier if I'd have used another library. Downshift takes a little bit of time to get used to and to set up, although it's great for accessibility
 

@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/api/index.js",
-    "server:dev": "nodemon src/api/index.js",
+    "server": "nodemon src/api/index.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server:dev\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "cd client && npm install && npm run build",
     "test": "cross-env NODE_ENV=test jest --env=node --watchAll",
     "coverage": "cross-env NODE_ENV=test jest --coverage",

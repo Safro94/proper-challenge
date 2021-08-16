@@ -104,7 +104,7 @@ Add .env file with this keys
 ```
 SKIP_PREFLIGHT_CHECK=true
 REACT_APP_SERVER_URL=http://localhost:9000
-REACT_APP_GOOGLE_API_KEY=AIzaSyBlYhENX2hYcNi5zkYarJTuyWmQ-Vkaz9A
+REACT_APP_GOOGLE_API_KEY={your_api_key}
 REACT_APP_DAWA_API_ENDPOINT=https://api.dataforsyningen.dk/autocomplete?q=
 ```
 
@@ -128,4 +128,4 @@ to run the tests.
 
 ## Technical decisions
 
-See this [file](https://github.com/Safro94/proper-challenge/blob/master/decisions.md) for the answers.
+See this [file](https://github.com/Safro94/proper-challenge/blob/master/decisions.md).
