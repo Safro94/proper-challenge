@@ -129,3 +129,7 @@ to run the tests.
 ## Technical decisions
 
 See this [file](https://github.com/Safro94/proper-challenge/blob/master/decisions.md).
+
+## Production
+
+Click this [link](https://ms-proper-challenge.herokuapp.com/) in order to go to the production version.
