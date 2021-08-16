@@ -38,13 +38,13 @@ app.use(compression());
 app.use(helmet());
 app.use(express.json());
 
-app.use(express.static(path.resolve(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Routes
 app.use('/api/properties', properties);
 
 app.get('*', (req, res) => {
-	res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+	res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 // Not found
