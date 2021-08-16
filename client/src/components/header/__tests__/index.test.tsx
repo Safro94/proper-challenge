@@ -10,6 +10,14 @@ describe('Header', () => {
 	beforeEach(() => {
 		render(<Header handleSidebar={handleSidebar} isOpen={isOpen} />);
 	});
+
+	it('should match the snapshot', () => {
+		const { container } = render(
+			<Header handleSidebar={handleSidebar} isOpen={isOpen} />
+		);
+		expect(container.firstChild).toMatchSnapshot();
+	});
+
 	it('should render correctly', () => {
 		expect(screen.getByTestId('icon')).toBeInTheDocument();
 		expect(screen.getByRole('link')).toBeInTheDocument();
