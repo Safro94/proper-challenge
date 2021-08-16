@@ -11,10 +11,33 @@ export const NewPropertyTitle = styled.h2(
 `
 );
 
-export const NewPropertyInputContainer = styled.div`
+export const NewPropertyInputAddressContainer = styled.div`
+	width: 100%;
+	display: flex;
+	gap: 5px;
+`;
+
+export const NewPropertyEditButtonContainer = styled.div`
+	display: flex;
+	align-items: flex-end;
+`;
+
+export const NewPropertyInputContainer = styled.div<{ disableInput?: boolean }>(
+	({ disableInput }) => `
 	width: 100%;
 	border-radius: 6px;
 	display: flex;
 	gap: 5px;
 	flex-direction: column;
-`;
+
+	input { 
+		${
+			disableInput &&
+			`
+			opacity: 0.5;
+			pointer-events: none;
+		`
+		}
+	}
+`
+);

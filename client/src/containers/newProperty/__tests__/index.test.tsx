@@ -23,6 +23,7 @@ jest.mock('react-router-dom', () => ({
 const fetchData = [
 	{ type: 'address', tekst: 'aa 35' },
 	{ type: 'address', tekst: 'aa 40' },
+	{ type: 'address', tekst: 'aa 40a' },
 	{ type: 'address', tekst: 'ab 30' },
 	{ type: 'address', tekst: 'ac 50' },
 ];
@@ -42,7 +43,7 @@ describe('NewPropertyContainer', () => {
 		expect(screen.getByRole('button', { name: /add/i })).toBeDisabled();
 	});
 
-	it('should show the addresses in the dropdown and filter while the user types', async () => {
+	it('should show the addresses in the dropdown, filter while the user types and call the fetcher', async () => {
 		(fetcher as jest.Mock).mockImplementationOnce(() =>
 			Promise.resolve({ data: fetchData, status: RequestStatus.Resolved })
 		);
@@ -54,14 +55,24 @@ describe('NewPropertyContainer', () => {
 			})
 		);
 
+		(fetcher as jest.Mock).mockImplementationOnce(() =>
+			Promise.resolve({
+				data: fetchData.filter(item => item.tekst.includes('aa 40')),
+				status: RequestStatus.Resolved,
+			})
+		);
+
 		(fetcher as jest.Mock).mockImplementationOnce(() => Promise.resolve());
 
 		render(<NewPropertyContainer />);
 
 		expect(fetcher).toHaveBeenCalledTimes(0);
 
-		const button = screen.getByRole('button', { name: /add/i });
-		expect(button).toBeDisabled();
+		const addButton = screen.getByRole('button', { name: /add/i });
+		expect(addButton).toBeDisabled();
+
+		const editButton = screen.getByRole('button', { name: /edit/i });
+		expect(editButton).toBeDisabled();
 
 		const input = screen.getByPlaceholderText(/enter address/i);
 
@@ -81,24 +92,41 @@ describe('NewPropertyContainer', () => {
 			});
 		});
 
-		expect(screen.getAllByRole('option')).toHaveLength(2);
-		const selectedOption = screen.getByRole('option', { name: /aa 40/i });
+		expect(screen.getAllByRole('option')).toHaveLength(3);
+		const selectedOption = screen.getByRole('option', { name: 'aa 40' });
 		userEvent.click(selectedOption);
+		expect(editButton).not.toBeDisabled();
 
 		userEvent.type(screen.getByPlaceholderText(/enter tenant/i), 'M');
 		userEvent.type(screen.getByPlaceholderText(/enter room/i), '2');
 		userEvent.type(screen.getByPlaceholderText(/enter size/i), '2');
 		userEvent.type(screen.getByPlaceholderText(/enter utilities/i), 'c');
-		expect(button).not.toBeDisabled();
+		expect(addButton).not.toBeDisabled();
 
-		userEvent.click(button);
+		userEvent.click(editButton);
+		expect(addButton).toBeDisabled();
 
-		expect(fetcher).toHaveBeenCalledTimes(3);
-		expect((fetcher as jest.Mock).mock.calls[2][0]).toStrictEqual({
+		userEvent.type(input, 'a');
+
+		await waitFor(() => {
+			expect(fetcher).toHaveBeenCalledTimes(3);
+			expect((fetcher as jest.Mock).mock.calls[2][0]).toStrictEqual({
+				url: `${process.env.REACT_APP_DAWA_API_ENDPOINT}aa 40a&caretpos=18&fuzzy=`,
+			});
+		});
+
+		const newSelectedOption = screen.getByRole('option', { name: /aa 40a/i });
+		userEvent.click(newSelectedOption);
+
+		expect(addButton).not.toBeDisabled();
+
+		userEvent.click(addButton);
+		expect(fetcher).toHaveBeenCalledTimes(4);
+		expect((fetcher as jest.Mock).mock.calls[3][0]).toStrictEqual({
 			url: `${process.env.REACT_APP_SERVER_URL}${PROPERTIES_ENDPOINT}`,
 			method: RequestMethods.POST,
 			body: {
-				address: 'aa 40',
+				address: 'aa 40a',
 				rooms: 12,
 				size: '2',
 				tenantName: 'M',

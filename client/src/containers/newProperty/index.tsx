@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 
 import AutoComplete from '../../components/autocomplete';
+import Button from '../../components/button';
 import Card from '../../components/card';
 import DropdownMenu from '../../components/dropdownMenu';
 import Form from '../../components/form';
@@ -18,13 +19,19 @@ import fetcher from '../../utils/fetcher';
 
 import { mapDawaResponse } from '../../utils/mapper';
 
-import { NewPropertyInputContainer, NewPropertyTitle } from './index.styles';
+import {
+	NewPropertyEditButtonContainer,
+	NewPropertyInputAddressContainer,
+	NewPropertyInputContainer,
+	NewPropertyTitle,
+} from './index.styles';
 
 const NewPropertyContainer = () => {
 	const history = useHistory();
 	const { t } = useTranslation(['common', 'newPropertyContainer']);
 	const handleError = useErrorHandler();
 
+	const [isAddressEditable, setIsAddressEditable] = useState(true);
 	const [address, setAddress] = useState('');
 	const [suggestions, setSuggestions] = useState<IAddress[]>([]);
 	const [rooms, setRooms] = useState(1);
@@ -37,7 +44,8 @@ const NewPropertyContainer = () => {
 		size.trim() === '' ||
 		rooms < 1 ||
 		tenantName.trim() === '' ||
-		utilities.trim() === '';
+		utilities.trim() === '' ||
+		isAddressEditable;
 
 	const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const inputValue = e.target.value;
@@ -55,8 +63,9 @@ const NewPropertyContainer = () => {
 		}, handleError);
 	};
 
-	const onChange = ({ text }: { text: string }) => {
+	const onSelectedItem = ({ text }: { text: string }) => {
 		setAddress(text);
+		setIsAddressEditable(false);
 	};
 
 	const onSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
@@ -77,35 +86,47 @@ const NewPropertyContainer = () => {
 		}, handleError);
 	};
 
+	const handleEditButton = () => {
+		setIsAddressEditable(true);
+	};
+
 	return (
 		<Card>
 			<NewPropertyTitle>
 				{t('newPropertyContainer:newPropertyTitle')}
 			</NewPropertyTitle>
 			<Form>
-				<NewPropertyInputContainer>
-					<AutoComplete
-						placeholder={`${t('newPropertyContainer:enter')} ${t('address')}`}
-						items={suggestions}
-						onInputChange={handleAddressChange}
-						onChange={onChange}
-						labelText={t('address')}
-						filterProp='text'
-						render={(
-							getMenuProps: any,
-							inputItems: IAddress[],
-							getItemProps: any,
-							isOpen: boolean
-						) => (
-							<DropdownMenu
-								getMenuProps={getMenuProps}
-								inputItems={inputItems}
-								getItemProps={getItemProps}
-								isOpen={isOpen}
-							/>
-						)}
-					/>
-				</NewPropertyInputContainer>
+				<NewPropertyInputAddressContainer>
+					<NewPropertyInputContainer disableInput={!isAddressEditable}>
+						<AutoComplete
+							placeholder={`${t('newPropertyContainer:enter')} ${t('address')}`}
+							items={suggestions}
+							onInputChange={handleAddressChange}
+							onChange={onSelectedItem}
+							labelText={t('address')}
+							filterProp='text'
+							render={(
+								getMenuProps: any,
+								inputItems: IAddress[],
+								getItemProps: any,
+								isOpen: boolean
+							) => (
+								<DropdownMenu
+									getMenuProps={getMenuProps}
+									inputItems={inputItems}
+									getItemProps={getItemProps}
+									isOpen={isOpen}
+								/>
+							)}
+						/>
+					</NewPropertyInputContainer>
+
+					<NewPropertyEditButtonContainer>
+						<Button onClick={handleEditButton} disabled={isAddressEditable}>
+							{t('edit')}
+						</Button>
+					</NewPropertyEditButtonContainer>
+				</NewPropertyInputAddressContainer>
 
 				<NewPropertyInputContainer>
 					<Form.Label>{t('tenant')}</Form.Label>

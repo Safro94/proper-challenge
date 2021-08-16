@@ -2,7 +2,7 @@
 
 exports[`NewPropertyContainer should render correctly 1`] = `
 <div
-  class="sc-jSFjdj jFwjWg"
+  class="sc-gKAaRy clasGk"
 >
   <h2
     class="sc-crzoAE jfCOzI"
@@ -14,44 +14,59 @@ exports[`NewPropertyContainer should render correctly 1`] = `
     method="POST"
   >
     <div
-      class="sc-dIsUp bxqZgp"
+      class="sc-dIsUp kQIqJD"
     >
       <div
-        class="sc-bdnxRM iWitlZ"
+        class="sc-ksluID bdaegv"
       >
         <div
-          class="sc-dlnjwi cSrDLl"
+          class="sc-bdnxRM iWitlZ"
         >
-          <label
-            class="sc-eCApnc fahIwV"
-            for="downshift-0-input"
-            id="downshift-0-label"
-          >
-            address
-          </label>
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-owns="downshift-0-menu"
-            class="sc-gtsrHT gIlwKp"
-            role="combobox"
+            class="sc-dlnjwi cSrDLl"
           >
-            <input
-              aria-autocomplete="list"
-              aria-controls="downshift-0-menu"
-              aria-labelledby="downshift-0-label"
-              autocomplete="off"
-              class="sc-hKFxyN daVEHi"
-              id="downshift-0-input"
-              placeholder="newPropertyContainer:enter address"
-              value=""
-            />
+            <label
+              class="sc-eCApnc fahIwV"
+              for="downshift-0-input"
+              id="downshift-0-label"
+            >
+              address
+            </label>
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="downshift-0-menu"
+              class="sc-gtsrHT gIlwKp"
+              role="combobox"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-0-menu"
+                aria-labelledby="downshift-0-label"
+                autocomplete="off"
+                class="sc-hKFxyN daVEHi"
+                id="downshift-0-input"
+                placeholder="newPropertyContainer:enter address"
+                value=""
+              />
+            </div>
           </div>
         </div>
       </div>
+      <div
+        class="sc-bqGGPW grIKgg"
+      >
+        <button
+          class="sc-jSFjdj bfWMye"
+          disabled=""
+          type="button"
+        >
+          edit
+        </button>
+      </div>
     </div>
     <div
-      class="sc-dIsUp bxqZgp"
+      class="sc-ksluID kJcpKk"
     >
       <label
         class="sc-kEqXSa gsioAq"
@@ -66,7 +81,7 @@ exports[`NewPropertyContainer should render correctly 1`] = `
       />
     </div>
     <div
-      class="sc-dIsUp bxqZgp"
+      class="sc-ksluID kJcpKk"
     >
       <label
         class="sc-kEqXSa gsioAq"
@@ -81,7 +96,7 @@ exports[`NewPropertyContainer should render correctly 1`] = `
       />
     </div>
     <div
-      class="sc-dIsUp bxqZgp"
+      class="sc-ksluID kJcpKk"
     >
       <label
         class="sc-kEqXSa gsioAq"
@@ -96,7 +111,7 @@ exports[`NewPropertyContainer should render correctly 1`] = `
       />
     </div>
     <div
-      class="sc-dIsUp bxqZgp"
+      class="sc-ksluID kJcpKk"
     >
       <label
         class="sc-kEqXSa gsioAq"
@@ -111,7 +126,7 @@ exports[`NewPropertyContainer should render correctly 1`] = `
       />
     </div>
     <button
-      class="sc-pNWdM jnMIbl"
+      class="sc-jSFjdj bfWMye"
       disabled=""
       type="submit"
     >
