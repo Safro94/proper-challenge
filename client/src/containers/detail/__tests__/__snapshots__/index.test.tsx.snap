@@ -5,90 +5,113 @@ exports[`DetailContainer should render correctly when fetcher returns a property
   class="sc-bdnxRM jOdtAk"
 >
   <div
-    class="sc-jSFjdj fVgdVX"
+    class="sc-iCoGMd feohLp"
   >
     <div
-      class="sc-iCoGMd xojqd"
+      class="sc-gKAaRy gwfjZu"
     >
-      <h2
-        class="sc-fujyAs idpLzs"
-      >
-        information
-      </h2>
       <div
-        class="sc-gtsrHT dBklPe"
+        class="sc-fujyAs gtwMwY"
       >
-        <div
-          class="sc-dlnjwi enLziH"
+        <h2
+          class="sc-pNWdM iMjUUm"
         >
-          <h4
-            class="sc-hKFxyN"
-          >
-            tenant
-          </h4>
-          <h5
-            class="sc-eCApnc daHCGb"
-          >
-            Matias
-          </h5>
-        </div>
+          information
+        </h2>
         <div
-          class="sc-dlnjwi enLziH"
+          class="sc-gtsrHT dBklPe"
         >
-          <h4
-            class="sc-hKFxyN"
+          <div
+            class="sc-dlnjwi enLziH"
           >
-            rooms
-          </h4>
-          <h5
-            class="sc-eCApnc daHCGb"
+            <h4
+              class="sc-hKFxyN"
+            >
+              tenant
+            </h4>
+            <h5
+              class="sc-eCApnc daHCGb"
+            >
+              Matias
+            </h5>
+          </div>
+          <div
+            class="sc-dlnjwi enLziH"
           >
-            3
-          </h5>
-        </div>
-        <div
-          class="sc-dlnjwi enLziH"
-        >
-          <h4
-            class="sc-hKFxyN"
+            <h4
+              class="sc-hKFxyN"
+            >
+              rooms
+            </h4>
+            <h5
+              class="sc-eCApnc daHCGb"
+            >
+              3
+            </h5>
+          </div>
+          <div
+            class="sc-dlnjwi enLziH"
           >
-            size
-          </h4>
-          <h5
-            class="sc-eCApnc daHCGb"
+            <h4
+              class="sc-hKFxyN"
+            >
+              size
+            </h4>
+            <h5
+              class="sc-eCApnc daHCGb"
+            >
+              40mt2
+            </h5>
+          </div>
+          <div
+            class="sc-dlnjwi enLziH"
           >
-            40mt2
-          </h5>
-        </div>
-        <div
-          class="sc-dlnjwi enLziH"
-        >
-          <h4
-            class="sc-hKFxyN"
+            <h4
+              class="sc-hKFxyN"
+            >
+              address
+            </h4>
+            <h5
+              class="sc-eCApnc daHCGb"
+            >
+              abc
+            </h5>
+          </div>
+          <div
+            class="sc-dlnjwi enLziH"
           >
-            address
-          </h4>
-          <h5
-            class="sc-eCApnc daHCGb"
-          >
-            abc
-          </h5>
-        </div>
-        <div
-          class="sc-dlnjwi enLziH"
-        >
-          <h4
-            class="sc-hKFxyN"
-          >
-            utilities
-          </h4>
-          <h5
-            class="sc-eCApnc daHCGb"
-          >
-            def
-          </h5>
+            <h4
+              class="sc-hKFxyN"
+            >
+              utilities
+            </h4>
+            <h5
+              class="sc-eCApnc daHCGb"
+            >
+              def
+            </h5>
+          </div>
         </div>
       </div>
+      <div
+        class="sc-kEqXSa cDvilN"
+      >
+        <img
+          alt="abc"
+          class="sc-iqAclL hRQVem"
+          src="house.jpeg"
+        />
+      </div>
+    </div>
+    <div
+      class="sc-crzoAE hsNFEq"
+    >
+      <button
+        class="sc-jSFjdj dqZJBZ"
+        type="button"
+      >
+        deleteProperty
+      </button>
     </div>
   </div>
 </div>
@@ -102,7 +125,7 @@ exports[`DetailContainer should render the loading when the request is not resol
 
 exports[`DetailContainer should render the text when there is no property 1`] = `
 <h1
-  class="sc-pNWdM effdkz"
+  class="sc-jrsJWt iyYqaZ"
 >
   noProperty
 </h1>

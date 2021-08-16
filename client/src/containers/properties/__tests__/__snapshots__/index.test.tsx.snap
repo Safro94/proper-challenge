@@ -64,227 +64,215 @@ exports[`PropertiesContainer should render correctly when fetcher returns proper
     </div>
     <ul
       aria-labelledby="downshift-0-label"
-      class="sc-bkbkJK fSawmC"
+      class="sc-fFSPTT eSiysg"
       id="downshift-0-menu"
       role="listbox"
     >
       <li
         aria-selected="false"
-        class="sc-dIsUp kHqbmm"
+        class="sc-crzoAE hHQKjd"
         id="downshift-0-item-0"
         role="option"
       >
         <div
-          class="sc-bqGGPW gFXebX"
+          class="sc-dIsUp A-dnFU"
         >
           <div
-            class="sc-hBMUJo PZmcA"
+            class="sc-ksluID coGYVn"
           >
             <img
               alt="Property 0"
-              class="sc-fnVZcZ dgIXpp"
+              class="sc-hBMUJo guZTpL"
               src="house.jpeg"
             />
           </div>
           <div
-            class="sc-jrsJWt hqQffW"
+            class="sc-pNWdM kraQCw"
           >
             <div
-              class="sc-kEqXSa ccymRA"
+              class="sc-jrsJWt fjzpVL"
             >
               <h4
-                class="sc-iqAclL"
+                class="sc-kEqXSa"
               >
                 tenant
               </h4>
               <h5
-                class="sc-crzoAE emQjSB"
+                class="sc-iqAclL fQNISX"
               >
                 Matias
               </h5>
             </div>
             <div
-              class="sc-kEqXSa ccymRA"
+              class="sc-jrsJWt fjzpVL"
             >
               <h4
-                class="sc-iqAclL"
+                class="sc-kEqXSa"
               >
                 rooms
               </h4>
               <h5
-                class="sc-crzoAE emQjSB"
+                class="sc-iqAclL fQNISX"
               >
                 3
               </h5>
             </div>
             <div
-              class="sc-kEqXSa ccymRA"
+              class="sc-jrsJWt fjzpVL"
             >
               <h4
-                class="sc-iqAclL"
+                class="sc-kEqXSa"
               >
                 size
               </h4>
               <h5
-                class="sc-crzoAE emQjSB"
+                class="sc-iqAclL fQNISX"
               >
                 40mt2
               </h5>
             </div>
             <div
-              class="sc-kEqXSa ccymRA"
+              class="sc-jrsJWt fjzpVL"
             >
               <h4
-                class="sc-iqAclL"
+                class="sc-kEqXSa"
               >
                 address
               </h4>
               <h5
-                class="sc-crzoAE emQjSB"
+                class="sc-iqAclL fQNISX"
               >
                 abc
               </h5>
             </div>
             <div
-              class="sc-kEqXSa ccymRA"
+              class="sc-jrsJWt fjzpVL"
             >
               <h4
-                class="sc-iqAclL"
+                class="sc-kEqXSa"
               >
                 utilities
               </h4>
               <h5
-                class="sc-crzoAE emQjSB"
+                class="sc-iqAclL fQNISX"
               >
                 def
               </h5>
             </div>
           </div>
           <div
-            class="sc-ksluID fsnncj"
+            class="sc-bqGGPW eDouVT"
           >
             <a
-              class="sc-fFSPTT liBlhH"
+              class="sc-fnVZcZ ifZzph"
               href="/property/1"
             >
               viewMore
             </a>
-            <button
-              class="sc-pNWdM bqZpHG"
-              type="button"
-            >
-              deleteProperty
-            </button>
           </div>
         </div>
       </li>
       <li
         aria-selected="false"
-        class="sc-dIsUp kHqbmm"
+        class="sc-crzoAE hHQKjd"
         id="downshift-0-item-1"
         role="option"
       >
         <div
-          class="sc-bqGGPW gFXebX"
+          class="sc-dIsUp A-dnFU"
         >
           <div
-            class="sc-hBMUJo PZmcA"
+            class="sc-ksluID coGYVn"
           >
             <img
               alt="Property 1"
-              class="sc-fnVZcZ dgIXpp"
+              class="sc-hBMUJo guZTpL"
               src="house.jpeg"
             />
           </div>
           <div
-            class="sc-jrsJWt hqQffW"
+            class="sc-pNWdM kraQCw"
           >
             <div
-              class="sc-kEqXSa ccymRA"
+              class="sc-jrsJWt fjzpVL"
             >
               <h4
-                class="sc-iqAclL"
+                class="sc-kEqXSa"
               >
                 tenant
               </h4>
               <h5
-                class="sc-crzoAE emQjSB"
+                class="sc-iqAclL fQNISX"
               >
                 Charles
               </h5>
             </div>
             <div
-              class="sc-kEqXSa ccymRA"
+              class="sc-jrsJWt fjzpVL"
             >
               <h4
-                class="sc-iqAclL"
+                class="sc-kEqXSa"
               >
                 rooms
               </h4>
               <h5
-                class="sc-crzoAE emQjSB"
+                class="sc-iqAclL fQNISX"
               >
                 3
               </h5>
             </div>
             <div
-              class="sc-kEqXSa ccymRA"
+              class="sc-jrsJWt fjzpVL"
             >
               <h4
-                class="sc-iqAclL"
+                class="sc-kEqXSa"
               >
                 size
               </h4>
               <h5
-                class="sc-crzoAE emQjSB"
+                class="sc-iqAclL fQNISX"
               >
                 40mt2
               </h5>
             </div>
             <div
-              class="sc-kEqXSa ccymRA"
+              class="sc-jrsJWt fjzpVL"
             >
               <h4
-                class="sc-iqAclL"
+                class="sc-kEqXSa"
               >
                 address
               </h4>
               <h5
-                class="sc-crzoAE emQjSB"
+                class="sc-iqAclL fQNISX"
               >
                 abc
               </h5>
             </div>
             <div
-              class="sc-kEqXSa ccymRA"
+              class="sc-jrsJWt fjzpVL"
             >
               <h4
-                class="sc-iqAclL"
+                class="sc-kEqXSa"
               >
                 utilities
               </h4>
               <h5
-                class="sc-crzoAE emQjSB"
+                class="sc-iqAclL fQNISX"
               >
                 def
               </h5>
             </div>
           </div>
           <div
-            class="sc-ksluID fsnncj"
+            class="sc-bqGGPW eDouVT"
           >
             <a
-              class="sc-fFSPTT liBlhH"
+              class="sc-fnVZcZ ifZzph"
               href="/property/2"
             >
               viewMore
             </a>
-            <button
-              class="sc-pNWdM bqZpHG"
-              type="button"
-            >
-              deleteProperty
-            </button>
           </div>
         </div>
       </li>

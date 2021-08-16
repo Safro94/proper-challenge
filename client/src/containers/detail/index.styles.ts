@@ -1,18 +1,20 @@
 import styled from 'styled-components';
 
-export const PropertyDetailContainer = styled.div(
+export const PropertyDetailContainerWrapper = styled.div(
 	({ theme }) => `
 	display: grid;
-
+	gap: 15px;
+	
 	@media ${theme.breakpoints.mobile} {
 		grid-template-columns: repeat(2, 1fr);
 	}
 `
 );
 
-export const PropertyDetailContainerWrapper = styled.div`
+export const PropertyDetailContainer = styled.div`
 	display: flex;
 	flex-direction: column;
+	gap: 15px;
 `;
 
 export const PropertyDetailInformationContainer = styled.div(
@@ -49,3 +51,17 @@ export const PropertyDetailText = styled.h1(
 	color: ${theme.palette.primary.main}
 `
 );
+
+export const PropertyDetailImageContainer = styled.div`
+	height: fit-content;
+`;
+
+export const PropertyDetailImage = styled.img`
+	height: 100%;
+	width: auto;
+`;
+
+export const PropertyDetailButtonContainer = styled.div`
+	display: flex;
+	justify-content: center;
+`;

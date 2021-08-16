@@ -1,15 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { useErrorHandler } from 'react-error-boundary';
 
-import Button from '../button';
 import PropertyInformation from '../propertyInformation';
 
 import { PROPERTY_DETAIL } from '../../constants/routes';
-import { PROPERTIES_ENDPOINT } from '../../constants/endpoints';
 
-import { ButtonTypes, IProperty, RequestMethods } from '../../types';
-
-import fetcher from '../../utils/fetcher';
+import { IProperty } from '../../types';
 
 import house from '../../assets/house.jpeg';
 
@@ -30,16 +25,6 @@ interface IPropertyProps {
 
 const Property = ({ item, index, getItemProps }: IPropertyProps) => {
 	const { t } = useTranslation('property');
-	const handleError = useErrorHandler();
-
-	const handleDeleteProperty = (id: number) => {
-		fetcher({
-			url: `${process.env.REACT_APP_SERVER_URL}${PROPERTIES_ENDPOINT}/${id}`,
-			method: RequestMethods.DELETE,
-		}).then(() => {
-			window.location.reload();
-		}, handleError);
-	};
 
 	return (
 		<PropertyItem {...getItemProps({ key: index, index, item })}>
@@ -56,13 +41,6 @@ const Property = ({ item, index, getItemProps }: IPropertyProps) => {
 					>
 						{t('viewMore')}
 					</PropertyLink>
-
-					<Button
-						variant={ButtonTypes.Danger}
-						onClick={() => handleDeleteProperty(item.id)}
-					>
-						{t('deleteProperty')}
-					</Button>
 				</PropertyButtonsContainer>
 			</PropertyContainer>
 		</PropertyItem>

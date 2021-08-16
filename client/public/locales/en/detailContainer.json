@@ -1,4 +1,5 @@
 {
   "information": "Property Information",
-  "noProperty": "Property not found"
+  "noProperty": "Property not found",
+  "deleteProperty": "Delete property"
 }

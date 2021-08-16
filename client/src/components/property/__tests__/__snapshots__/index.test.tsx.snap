@@ -2,109 +2,103 @@
 
 exports[`Property should render correctly 1`] = `
 <li
-  class="sc-jSFjdj eDBPpq"
+  class="sc-eCApnc lfPdvz"
 >
   <div
-    class="sc-gKAaRy klXkns"
+    class="sc-jSFjdj jfKPoc"
   >
     <div
-      class="sc-fujyAs iWqvxR"
+      class="sc-iCoGMd jOEuIw"
     >
       <img
         alt="Property 1"
-        class="sc-pNWdM bhKqTs"
+        class="sc-fujyAs dqEviu"
         src="house.jpeg"
       />
     </div>
     <div
-      class="sc-gtsrHT dBklPe"
+      class="sc-bdnxRM bDiZob"
     >
       <div
-        class="sc-dlnjwi enLziH"
+        class="sc-gtsrHT JXsyT"
       >
         <h4
-          class="sc-hKFxyN"
+          class="sc-dlnjwi"
         >
           tenant
         </h4>
         <h5
-          class="sc-eCApnc daHCGb"
+          class="sc-hKFxyN cLDGBv"
         >
           Matias
         </h5>
       </div>
       <div
-        class="sc-dlnjwi enLziH"
+        class="sc-gtsrHT JXsyT"
       >
         <h4
-          class="sc-hKFxyN"
+          class="sc-dlnjwi"
         >
           rooms
         </h4>
         <h5
-          class="sc-eCApnc daHCGb"
+          class="sc-hKFxyN cLDGBv"
         >
           3
         </h5>
       </div>
       <div
-        class="sc-dlnjwi enLziH"
+        class="sc-gtsrHT JXsyT"
       >
         <h4
-          class="sc-hKFxyN"
+          class="sc-dlnjwi"
         >
           size
         </h4>
         <h5
-          class="sc-eCApnc daHCGb"
+          class="sc-hKFxyN cLDGBv"
         >
           40mt2
         </h5>
       </div>
       <div
-        class="sc-dlnjwi enLziH"
+        class="sc-gtsrHT JXsyT"
       >
         <h4
-          class="sc-hKFxyN"
+          class="sc-dlnjwi"
         >
           address
         </h4>
         <h5
-          class="sc-eCApnc daHCGb"
+          class="sc-hKFxyN cLDGBv"
         >
           abc
         </h5>
       </div>
       <div
-        class="sc-dlnjwi enLziH"
+        class="sc-gtsrHT JXsyT"
       >
         <h4
-          class="sc-hKFxyN"
+          class="sc-dlnjwi"
         >
           utilities
         </h4>
         <h5
-          class="sc-eCApnc daHCGb"
+          class="sc-hKFxyN cLDGBv"
         >
           def
         </h5>
       </div>
     </div>
     <div
-      class="sc-iCoGMd iitrTY"
+      class="sc-gKAaRy cNpYlU"
     >
       <a
-        class="sc-jrsJWt gwtpa"
+        class="sc-pNWdM jsDhds"
         href="/property/1"
       >
         viewMore
       </a>
-      <button
-        class="sc-bdnxRM jjtgId"
-        type="button"
-      >
-        deleteProperty
-      </button>
     </div>
   </div>
 </li>
